@@ -26,6 +26,11 @@ section, summary, time, mark, audio, video {
 	vertical-align: baseline;
 	}
 
+img {
+	object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
@@ -1977,7 +1982,7 @@ input, select, textarea {
 
 		header.major {
 			border-bottom-width: 1px;
-			border-color: rgba(224, 224, 224, 0.75);
+			border-color: white;
 			border-style: solid;
 			border-top-width: 1px;
 			margin-bottom: 6em;
@@ -1986,7 +1991,7 @@ input, select, textarea {
 		}
 
 			header.major:before, header.major:after {
-				background: rgba(224, 224, 224, 0.75);
+				background: white;
 				content: '';
 				display: block;
 				height: 1px;
@@ -2037,7 +2042,7 @@ input, select, textarea {
 
 		footer.major {
 			border-bottom-width: 1px;
-			border-color: rgba(224, 224, 224, 0.75);
+			border-color: white;
 			border-style: solid;
 			border-top-width: 1px;
 			margin-top: 6em;
@@ -2046,7 +2051,7 @@ input, select, textarea {
 		}
 
 			footer.major:before, footer.major:after {
-				background: rgba(224, 224, 224, 0.75);
+				background: white;
 				content: '';
 				display: block;
 				height: 1px;
@@ -2614,7 +2619,7 @@ input, select, textarea {
 
 	.feature {
 		position: relative;
-		height: 20em;
+		/* height: 20em; */
 	}
 
 		.feature:after {
@@ -2624,7 +2629,7 @@ input, select, textarea {
 		}
 
 		.feature h3, .feature h4, .feature h5, .feature h6 {
-			text-align: inherit;
+			text-align: center;
 		}
 
 		.feature .image {
@@ -2644,7 +2649,7 @@ input, select, textarea {
 
 		.feature:before {
 			background: blue;
-			content: '';
+			/* content: ''; */
 			display: inline-block;
 			height: 100%;
 			vertical-align: middle;
@@ -2654,7 +2659,7 @@ input, select, textarea {
 			display: inline-block;
 			padding: 3.5em;
 			vertical-align: middle;
-			width: 48%;
+			/* width: 48%; */
 		}
 
 			.feature .content h3 {
@@ -2679,11 +2684,11 @@ input, select, textarea {
 				}
 
 			.feature.left .content {
-				padding-right: 0;
+				/* padding-right: 0; */
 			}
 
 		.feature.right {
-			text-align: right;
+			/* text-align: right; */
 		}
 
 			.feature.right .image {
@@ -2696,7 +2701,7 @@ input, select, textarea {
 				}
 
 			.feature.right .content {
-				padding-left: 0;
+				/* padding-left: 0; */
 			}
 
 		.feature.long .content {
@@ -2718,7 +2723,7 @@ input, select, textarea {
 	}
 
 		#header:before, #header:after {
-			background: rgba(224, 224, 224, 0.75);
+			background: white;
 			content: '';
 			left: 50%;
 			position: absolute;
@@ -2764,17 +2769,12 @@ input, select, textarea {
 		}
 
 		#header .logo {
-			background: #F28500;
+			background-image: url(images/ArcHoopsLogo.png);
+			background-size: cover;
 			border-radius: 100%;
-			color: #ffffff;
-			cursor: default;
 			display: inline-block;
-			font-size: 2.25em;
-			height: 2.35em;
-			line-height: 2.35em;
-			margin: 0 0 0.75em 0;
-			text-align: center;
-			width: 2.35em;
+			height: 4.35em;
+			width: 4.35em;
 		}
 
 			#header .logo.fa-paper-plane-o:before {
@@ -2815,7 +2815,7 @@ input, select, textarea {
 	}
 
 		#footer:before {
-			/* background: rgba(224, 224, 224, 0.75); */
+			/* background:white; */
 			content: '';
 			height: calc(460px + 6em);
 			left: 50%;
@@ -2911,7 +2911,7 @@ input, select, textarea {
 	}
 
 		#main:before {
-			background: rgba(224, 224, 224, 0.75);
+			background:white;
 			content: '';
 			height: 100%;
 			left: 50%;
@@ -2982,7 +2982,7 @@ input, select, textarea {
 			}
 
 			h3 {
-				font-size: 1.15em;
+				font-size: 1.75em;
 			}
 
 		/* Section/Article */
@@ -3011,7 +3011,7 @@ input, select, textarea {
 		/* Feature */
 
 			.feature {
-				height: 18em;
+				/* height: 18em; */
 			}
 
 				.feature .content {
@@ -3036,7 +3036,7 @@ input, select, textarea {
 				}
 
 				#header h1 {
-					font-size: 2em;
+					font-size: 2.75em;
 				}
 
 				#header p {
@@ -3105,7 +3105,7 @@ input, select, textarea {
 			}
 
 			h3 {
-				font-size: 1em;
+				font-size: 1.5em;
 			}
 
 		/* Section/Article */
@@ -3165,9 +3165,9 @@ input, select, textarea {
 				}
 
 				.feature .content {
-					border: solid 1px rgba(224, 224, 224, 0.75);
+					border: solid 1px white;
 					padding: 2em !important;
-					text-align: center;
+					/* text-align: center; */
 					width: 100%;
 				}
 
