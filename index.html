@@ -6,13 +6,27 @@
   <title>ArcHoops</title>
   <link rel="stylesheet" href="styles.css" />
   <script src="https://kit.fontawesome.com/e7390f5b86.js" crossorigin="anonymous"></script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ArcHoops",
+      "url": "https://www.archoops.net",
+      "logo": "https://www.archoops.net/images/ArcHoopsLogo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-614-506-6271",
+        "contactType": "Customer Service"
+      }
+    }
+  </script>
 </head>
 <body>
 
   <!-- HEADER -->
   <header>
   <div class="container">
-    <h1 class="logo">ArcHoops</h1>
+    <h1 class="logo"><a href="index.html">ArcHoops</a></h1>
     <nav>
       <ul>
         <li><a href="#hero">Home</a></li>
@@ -27,7 +41,9 @@
         <li><a href="#business">Business</a></li>
         <li><a href="#roadmap">Roadmap</a></li> -->
         <!-- <li><a href="#team">About</a></li> -->
+		<li><a href="#our-team">About Us</a></li>
 		<li><a href="#contact">Contact</a></li>
+		<li><a href="pitch.html">Pitch Deck</a></li>
       </ul>
     </nav>
   </div>
@@ -207,6 +223,39 @@
       <div class="timeline-item"><h3>Future Expansion</h3><p>Expand to additional sports beyond basketball.</p></div>
     </div>
   </section> -->
+
+  <!-- OUR TEAM -->
+  <section id="our-team" class="content-section">
+    <h2><i class="fa-regular fa-people-group"></i> Our Team</h2>
+    <div class="grid three-cols">
+      <div class="card">
+        <!-- <div class="img-placeholder small">Learn Image</div> -->
+		<h3>Ronald Dupree</h3>
+		<div class="img-placeholder small headshot"><img src="images/ronald.jpg" alt="Headshot of Ronald Dupree"></div>
+        <p>Chief Executive Officer<br>
+			Former NBA Player<br>
+			General Manager, LSU Men's Basketball</p>
+      </div>
+      <div class="card">
+        <!-- <div class="img-placeholder small">Practice Image</div> -->
+		<h3>Ashley Brio</h3>
+		<div class="img-placeholder small headshot"><img src="images/ashley.jpg" alt="Headshot of Ashley Brio"></div>
+        <p>Chief Operating Officer<br>
+			Basketball Analytics and Data Science<br>
+			2K Sports, Milwaukee Bucks, CMU</p>
+      </div>
+      <div class="card">
+        <!-- <div class="img-placeholder small">Practice Image</div> -->
+		<h3>Laura Bloch</h3>
+		<div class="img-placeholder small headshot"><img src="images/laura.jpg" alt="Headshot of Laura Bloch"></div>
+        <p>Chief Product Officer<br>
+			MA Educational Technology<br>
+			BS Computer Engineering<br>
+			Columbia, CMU
+		</p>
+      </div>
+    </div>
+  </section>
 
   <!-- CONTACT -->
   <section id="contact" class="contact-section">

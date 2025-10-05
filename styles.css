@@ -25,6 +25,7 @@ header {
   top: 0;
   z-index: 1000;
 }
+
 header .container {
   width: 90%;
   max-width: 1200px;
@@ -32,6 +33,11 @@ header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
 }
 
 header nav ul {
@@ -168,6 +174,19 @@ header nav a:hover {
   justify-content: center;
   font-weight: bold;
 }
+
+#our-team .card {
+  background: #ffe0cc;
+}
+
+.card .img-placeholder.small.headshot{
+  background: none;
+}
+
+.card img {
+    border-radius: 8px;
+}
+
 .card h3 {
   color: #b52e20;
   margin-bottom: 0.8rem;
