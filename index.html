@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,115 +22,231 @@
     }
   </script>
 </head>
+
 <body>
 
   <!-- HEADER -->
   <header>
-  <div class="container">
-    <h1 class="logo"><a href="index.html">ArcHoops</a></h1>
-    <nav>
-      <ul>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#learning-model">Learning Model</a></li>
-		<li><a href="#demo">Demo</a></li>
-        <!-- <li><a href="#vision">Vision</a></li>
-		<li><a href="#mission">Mission</a></li> -->
-        <!-- <li><a href="#problem">Problem</a></li>
-        <li><a href="#solution">Solution</a></li>
-        <li><a href="#market">Market</a></li>
-        <li><a href="#advantage">Advantage</a></li>
-        <li><a href="#business">Business</a></li>
-        <li><a href="#roadmap">Roadmap</a></li> -->
-        <!-- <li><a href="#team">About</a></li> -->
-		<li><a href="#our-team">Our Team</a></li>
-		<li><a href="#contact">Contact</a></li>
-		<li><a href="pitch.html">Pitch Deck</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+    <div class="container">
+      <h1 class="logo"><a href="index.html">ArcHoops</a></h1>
+      <nav>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#products">About</a></li>
+          <li><a href="#business-description">Business</a></li>
+          <li><a href="#timeline">Timeline</a></li>
+          <li><a href="#demo">Demo</a></li>
+          <li><a href="#our-team">Our Team</a></li>
+          <li><a href="pitch.html">Pitch Deck</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
   <!-- HERO -->
   <section id="hero" class="hero">
     <div class="hero-text">
       <h2>Teaching kids data through predicting basketball game outcomes.</h2>
-      <a href="#contact" class="btn-primary">Get in Touch</a>
+      <p>ArcHoops is an interactive web application that teaches data science through basketball analytics.
+      </p>
     </div>
-    <!-- <div class="hero-img">
-      <div class="img-placeholder">Hero Image / App Mockup</div>
-    </div> -->
+    <div class="hero-img">
+      <div class="img-placeholder"><img src="images/homescreen.png" alt="ArcHoops Student Home Screen"></div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section id="products" class="content-section light-bg">
+    <h2><i class="fas fa-mobile-screen-button icon"></i> Our Product</h2>
+    <div class="grid">
+      <div class="text">
+        <p>Currently in development, our platform combines education, gaming, and sports to create an engaging learning experience.
+        </p>
+        <div class="grid three-cols">
+
+          <div class="card">
+            <!-- <div class="img-placeholder small">Learn Image</div> -->
+            <i class="fas fa-graduation-cap icon"></i>
+            <h3>Learn</h3>
+            <div class="img-placeholder small"><img src="images/Learn.png"
+                alt="Screenshot of Learn panel in application">
+            </div>
+            <p>Students explore basketball analytics and data-driven decision-making through interactive video lessons
+              delivered
+              by their favorite players.</p>
+          </div>
+          <div class="card">
+            <!-- <div class="img-placeholder small">Practice Image</div> -->
+            <i class="fas fa-gamepad icon"></i>
+            <h3>Practice</h3>
+            <div class="img-placeholder small"><img src="images/Practice.png"
+                alt="Screenshot of Practice panel in application"></div>
+            <p>They apply what they've learned by predicting key metrics for upcoming NBA games using historical data.
+            </p>
+          </div>
+          <div class="card">
+            <!-- <div class="img-placeholder small">Compare Image</div> -->
+            <i class="fas fa-trophy icon"></i>
+            <h3>Compare</h3>
+            <div class="img-placeholder small"><img src="images/Compare.png"
+                alt="Screenshot of Compare panel in application"></div>
+            <p>Students earn points based on prediction accuracy, compare with friends and classmates, and compete to
+              improve
+              stats.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- LEARN / PRACTICE / COMPARE -->
-  <section id="learning-model" class="content-section">
+  <!-- <section id="learning-model" class="content-section">
     <h2><i class="fas fa-cogs icon"></i> Learning Model</h2>
     <div class="grid three-cols">
       <div class="card">
-        <!-- <div class="img-placeholder small">Learn Image</div> -->
-		<h3>Learn</h3>
-		<div class="img-placeholder small"><img src="images/Learn.png" alt="Screenshot of Learn panel in application"></div>
-        <p>Kids explore basketball analytics and data-driven decision-making through interactive video lessons delivered by their favorite players.</p>
+        <div class="img-placeholder small">Learn Image</div>
+        <h3>Learn</h3>
+        <div class="img-placeholder small"><img src="images/Learn.png" alt="Screenshot of Learn panel in application">
+        </div>
+        <p>Kids explore basketball analytics and data-driven decision-making through interactive video lessons delivered
+          by their favorite players.</p>
       </div>
       <div class="card">
-        <!-- <div class="img-placeholder small">Practice Image</div> -->
-		<h3>Practice</h3>
-		<div class="img-placeholder small"><img src="images/Practice.png" alt="Screenshot of Practice panel in application"></div>
+        <div class="img-placeholder small">Practice Image</div>
+        <h3>Practice</h3>
+        <div class="img-placeholder small"><img src="images/Practice.png"
+            alt="Screenshot of Practice panel in application"></div>
         <p>They apply what they've learned by predicting key metrics for upcoming NBA games using historical data.</p>
       </div>
       <div class="card">
-        <!-- <div class="img-placeholder small">Compare Image</div> -->
-		 <h3>Compare</h3>
-		 <div class="img-placeholder small"><img src="images/Compare.png" alt="Screenshot of Compare panel in application"></div>
-        <p>Earn points based on prediction accuracy, compare with friends and classmates, and compete to improve stats.</p>
+        <div class="img-placeholder small">Compare Image</div>
+        <h3>Compare</h3>
+        <div class="img-placeholder small"><img src="images/Compare.png"
+            alt="Screenshot of Compare panel in application"></div>
+        <p>Earn points based on prediction accuracy, compare with friends and classmates, and compete to improve stats.
+        </p>
       </div>
     </div>
-  </section>
+  </section> -->
 
-  <section id="demo" class="content-section light-bg">
-    <h2>Demo Video</h2>
-    <div class="grid">
-		<div class="video-container">
-			<iframe
-				title="ArcHoops Demo Video"
-				src="https://youtube.com/embed/zNCxkmd1w_4"
-				frameborder="0"
-				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-				allowfullscreen
-			></iframe>
-		</div>
-    </div>
-  </section>
-
-  <!-- SURVEY CTA -->
-  <section id="signup-cta" class="content-section">
-    <div class="signup-inner">
-      <h2>Get Ready to Hoop!</h2>
-      <p>Complete our survey to sign up for free beta access, provide feedback, and stay in the loop on updates.</p>
-      <a href="https://forms.gle/j8ucU9C8W2SPKuND8" class="btn-primary">Complete Survey</a>
-    </div>
-  </section>
 
 
   <!-- ================== PITCH DECK SECTIONS ================== -->
 
-  <section id="vision-mission" class="content-section light-bg">
+  <section id="vision-mission" class="content-section">
     <div class="grid two-cols">
       <div class="card" id="vision">
         <!-- <div class="img-placeholder small">Vision Image</div> -->
         <i class="fas fa-lightbulb icon"></i>
-		<h2>Vision</h2>
+        <h2>Vision</h2>
         <p>Empowering the next generation of diverse STEM leaders through sports analytics.</p>
       </div>
       <div class="card" id="mission">
         <!-- <div class="img-placeholder small">Mission Image</div> -->
         <i class="fas fa-bullseye icon"></i>
-      	<h2>Mission</h2>
-      	<p>Transforming kids’ enthusiasm for sports into a powerful tool for learning about data science.</p>
+        <h2>Mission</h2>
+        <p>Transforming kids' enthusiasm for sports into a powerful tool for learning about data science.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUSINESS DESCRIPTION -->
+  <section id="business-description" class="content-section light-bg">
+    <h2><i class="fas fa-building icon"></i> Business Description</h2>
+    <div class="grid">
+      <div class="text">
+        <p>ArcHoops addresses the critical lack of diversity in STEM and sports analytics through an engaging
+          educational platform that makes data science accessible and exciting for middle school students.</p>
+
+        <div class="grid two-cols">
+          <div class="card">
+            <i class="fas fa-chart-bar icon"></i>
+            <h3>The Problem</h3>
+            <ul>
+              <li>Only 9% of the STEM workforce in the US is Black or African American</li>
+              <li>Fewer than 5% of NBA analytics professionals are African American, compared to 70% of players</li>
+              <li>Traditional STEM programs often fail to connect with students' interests</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <i class="fas fa-users icon"></i>
+            <h3>Target Audience</h3>
+            <ul>
+              <li>Middle school students (grades 6-8)</li>
+              <li>Schools and educational districts</li>
+              <li>After-school sports clubs and youth programs</li>
+              <li>Parents seeking engaging STEM education</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   
+
+  <!-- ROADMAP -->
+  <!-- <section id="roadmap" class="content-section">
+    <h2><i class="fas fa-road icon"></i> Roadmap</h2>
+    <div class="timeline">
+      <div class="timeline-item"><h3>MVP Development</h3><p>Initial build of the ArcHoops platform.</p></div>
+      <div class="timeline-item"><h3>Beta Testing & Pilots</h3><p>Gather feedback through pilots in schools.</p></div>
+      <div class="timeline-item"><h3>Full Launch & Scale</h3><p>Expand platform availability and grow user base.</p></div>
+      <div class="timeline-item"><h3>Future Expansion</h3><p>Expand to additional sports beyond basketball.</p></div>
+    </div>
+  </section> -->
+
+  <section id="timeline" class="content-section">
+    <h2><i class="fas fa-road icon"></i> Timeline</h2>
+    <div class="grid">
+      <div class="card">
+        <i class="fas fa-code-branch icon"></i>
+        <h3>Current Stage: Beta Development</h3>
+        <div class="timeline">
+          <div class="timeline-item complete">
+            <i class="fas fa-check-circle"></i>
+            <h4>Q3 2025:<br>Initial Research</h4>
+            <ul>
+              <li>Market validation with educators</li>
+              <li>Student focus groups</li>
+              <li>Technical architecture design</li>
+            </ul>
+          </div>
+          <div class="timeline-item active">
+            <i class="fas fa-circle"></i>
+            <h4>Q4 2025:<br>Beta Development</h4>
+            <ul>
+              <li>Video learning modules</li>
+              <li>Game statistic graphs and tables</li>
+              <li>Key predictions</li>
+              <li>Preparation for in-school pilots</li>
+            </ul>
+          </div>
+          <div class="timeline-item">
+            <i class="far fa-circle"></i>
+            <h4>Q1 2026:<br>Beta Launch</h4>
+            <ul>
+              <li>School pilot programs</li>
+              <li>User and educational feedback</li>
+              <li>Platform refinement</li>
+            </ul>
+          </div>
+          <div class="timeline-item">
+            <i class="far fa-circle"></i>
+            <h4>Q2 2026:<br>Full Release</h4>
+            <ul>
+              <li>Public platform launch</li>
+              <li>Expanded content library</li>
+              <li>School partnership program</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
 
   <!-- VISION -->
@@ -152,34 +269,7 @@
     </div>
   </section> -->
 
-  <!-- PROBLEM -->
-  <!-- <section id="problem" class="content-section light-bg">
-    <h2><i class="fas fa-exclamation-triangle icon"></i></h2>
-    <div class="grid">
-      <ul>
-        <li>Only 9% of the STEM workforce in the US is Black or African American.</li>
-        <li>Fewer than 5% of NBA analytics professionals are African American, compared to 70% of players.</li>
-        <li>Existing STEM programs fail to connect with students’ real-world interests.</li>
-      </ul> -->
-      <!-- <div class="img-placeholder">Problem Illustration</div> -->
-    <!-- </div>
-  </section> -->
-
-  <!-- SOLUTION -->
-  <!-- <section id="solution" class="content-section">
-    <h2><i class="fas fa-lightbulb icon"></i> </h2>
-    <div class="grid">
-      <div class="text">
-        <p>ArcHoops is a web application that teaches middle school students to combine data analytics and basketball to compete against friends in predicting game outcomes.</p>
-        <ul>
-          <li><strong>Learn:</strong> Interactive lessons delivered by favorite players.</li>
-          <li><strong>Practice:</strong> Predict outcomes using historical data.</li>
-          <li><strong>Compare:</strong> Earn points and compete with friends.</li>
-        </ul>
-      </div>
-      <div class="img-placeholder">Solution Screenshot Placeholder</div>
-    </div>
-  </section> -->
+  
 
   <!-- MARKET -->
   <!-- <section id="market" class="content-section light-bg">
@@ -213,16 +303,17 @@
     </ul>
   </section> -->
 
-  <!-- ROADMAP -->
-  <!-- <section id="roadmap" class="content-section">
-    <h2><i class="fas fa-road icon"></i> Roadmap</h2>
-    <div class="timeline">
-      <div class="timeline-item"><h3>MVP Development</h3><p>Initial build of the ArcHoops platform.</p></div>
-      <div class="timeline-item"><h3>Beta Testing & Pilots</h3><p>Gather feedback through pilots in schools.</p></div>
-      <div class="timeline-item"><h3>Full Launch & Scale</h3><p>Expand platform availability and grow user base.</p></div>
-      <div class="timeline-item"><h3>Future Expansion</h3><p>Expand to additional sports beyond basketball.</p></div>
+
+  <section id="demo" class="content-section light-bg">
+    <h2>Demo Video</h2>
+    <div class="grid">
+      <div class="video-container">
+        <iframe title="ArcHoops Demo Video" src="https://youtube.com/embed/zNCxkmd1w_4" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
     </div>
-  </section> -->
+  </section>
 
   <!-- OUR TEAM -->
   <section id="our-team" class="content-section">
@@ -230,38 +321,47 @@
     <div class="grid three-cols">
       <div class="card">
         <!-- <div class="img-placeholder small">Learn Image</div> -->
-		<h3>Ronald Dupree</h3>
-		<div class="img-placeholder small headshot"><img src="images/ronald.jpg" alt="Headshot of Ronald Dupree"></div>
+        <h3>Ronald Dupree</h3>
+        <div class="img-placeholder small headshot"><img src="images/ronald.jpg" alt="Headshot of Ronald Dupree"></div>
         <p>Chief Executive Officer<br>
-			Former NBA Player<br>
-			General Manager, LSU Men's Basketball</p>
+          Former NBA Player<br>
+          General Manager, LSU Men's Basketball</p>
       </div>
       <div class="card">
         <!-- <div class="img-placeholder small">Practice Image</div> -->
-		<h3>Ashley Brio</h3>
-		<div class="img-placeholder small headshot"><img src="images/ashley.jpg" alt="Headshot of Ashley Brio"></div>
+        <h3>Ashley Brio</h3>
+        <div class="img-placeholder small headshot"><img src="images/ashley.jpg" alt="Headshot of Ashley Brio"></div>
         <p>Chief Operating Officer<br>
-			Basketball Analytics and Data Science<br>
-			2K Sports, Milwaukee Bucks, CMU</p>
+          Basketball Analytics and Data Science<br>
+          2K Sports, Milwaukee Bucks, CMU</p>
       </div>
       <div class="card">
         <!-- <div class="img-placeholder small">Practice Image</div> -->
-		<h3>Laura Bloch</h3>
-		<div class="img-placeholder small headshot"><img src="images/laura.jpg" alt="Headshot of Laura Bloch"></div>
+        <h3>Laura Bloch</h3>
+        <div class="img-placeholder small headshot"><img src="images/laura.jpg" alt="Headshot of Laura Bloch"></div>
         <p>Chief Product Officer<br>
-			MA Educational Technology<br>
-			BS Computer Engineering<br>
-			Columbia, CMU
-		</p>
+          MA Educational Technology<br>
+          BS Computer Engineering<br>
+          Columbia, CMU
+        </p>
       </div>
+    </div>
+  </section>
+
+  
+  <!-- SURVEY CTA -->
+  <section id="signup-cta" class="content-section light-bg">
+    <div class="signup-inner">
+      <h2>Get Ready to Hoop!</h2>
+      <p>Complete our survey to sign up for free beta access, provide feedback, and stay in the loop on updates.</p>
+      <a href="https://forms.gle/j8ucU9C8W2SPKuND8" class="btn-primary">Complete Survey</a>
     </div>
   </section>
 
   <!-- CONTACT -->
   <section id="contact" class="contact-section">
     <h2><i class="fa-regular fa-envelope"></i> Contact Us</h2>
-    <p>Email: info@archoops.net</p>
-    <p>Phone: (614) 506-6271</p>
+    <p>Email: <a href="mailto:info@archoops.net">info@archoops.net</a></p>
     <div class="social-links">
       <a href="https://www.instagram.com/arc_hoops/"><i class="fab fa-instagram"></i></a>
       <a href="https://www.linkedin.com/company/archoops"><i class="fab fa-linkedin"></i></a>
@@ -273,4 +373,5 @@
   </footer>
 
 </body>
+
 </html>
