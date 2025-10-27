@@ -26,4 +26,23 @@
 			}, 100);
 		});
 
+	// Mobile menu toggle
+	$(document).ready(function() {
+		const $navToggle = $('.nav-toggle');
+		const $nav = $('.nav');
+		
+		$navToggle.on('click', function(e) {
+			e.preventDefault();
+			const isVisible = $nav.attr('data-visible') === 'true';
+			$nav.attr('data-visible', (!isVisible).toString());
+			$navToggle.attr('aria-expanded', (!isVisible).toString());
+		});
+
+		// Close menu when clicking a link
+		$('.nav-list a').on('click', function() {
+			$nav.attr('data-visible', 'false');
+			$navToggle.attr('aria-expanded', 'false');
+		});
+	});
+
 })(jQuery);
