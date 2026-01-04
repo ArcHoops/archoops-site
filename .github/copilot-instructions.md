@@ -10,14 +10,14 @@ This is a small, static landing-site repository (single-page marketing site + pi
 Key facts and where to look
 - Main entry: `index.html` — the single-page landing markup (sections identified by id attributes like `#hero`, `#learning-model`, `#demo`, etc.).
 - Styling: root `styles.css` is the compiled stylesheet served by the site. Source SCSS: `assets/sass/main.scss` and partials in `assets/sass/libs/`.
-- Images: `images/` holds site images referenced directly from HTML.
+- Images: `assets/site-images/` holds site images referenced directly from HTML.
 - Fonts: `webfonts/` contains local font assets.
 - JS: `assets/js/` contains `jquery.min.js`, `main.js`, `util.js`, and small libs; maintain the existing load order — jQuery first, plugins, then `main.js`.
 - Pitch page: `pitch.html` — separate static page for the pitch deck.
 
 Project conventions and patterns
 - This repo uses an HTML5 UP template (see `README.txt` header). Many sections are left commented-out in `index.html`. Avoid deleting commented sections unless instructed.
-- Asset paths are relative and rooted at the repo root (e.g., `<link href="styles.css">`, `<img src="images/...">`).
+- Asset paths are relative and rooted at the repo root (e.g., `<link href="styles.css">`, `<img src="assets/site-images/...">`).
 - If editing styles prefer updating `assets/sass/main.scss` and compiling to `styles.css` (see workflow below) so changes remain maintainable.
 
 Developer workflows (discoverable / recommended)
@@ -50,7 +50,7 @@ Files to check when editing
 - `styles.css` (served stylesheet)
 - `assets/sass/main.scss` + `assets/sass/libs/` (style sources)
 - `assets/js/main.js` and `assets/js/util.js` (site behavior)
-- `images/` and `webfonts/` for media and fonts
+- `assets/site-images/` and `webfonts/` for media and fonts
 
 If anything here is unclear or you want the AI to follow a stricter style or commit convention (commit message prefix, branching rules, formatting), tell us and I will incorporate it.
 
