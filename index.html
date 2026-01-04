@@ -8,15 +8,15 @@
   <link rel="stylesheet" href="styles.css" />
   <script src="https://kit.fontawesome.com/e7390f5b86.js" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="assets/js/breakpoints.min.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="site-assets/js/breakpoints.min.js"></script>
+  <script src="site-assets/js/main.js"></script>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "ArcHoops",
       "url": "https://www.archoops.net",
-      "logo": "https://www.archoops.net/assets/site-images/ArcHoopsLogo.png",
+      "logo": "https://www.archoops.net/site-assets/images/ArcHoopsLogo.png",
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+1-614-506-6271",
@@ -37,14 +37,20 @@
       </button>
       <nav class="nav" data-visible="false">
         <ul class="nav-list">
-          <li><a href="#hero">Home</a></li>
-          <li><a href="#products">About</a></li>
-          <li><a href="#business-description">Business</a></li>
-          <li><a href="#timeline">Timeline</a></li>
-          <li><a href="#demo">Demo</a></li>
-          <li><a href="#our-team">Our Team</a></li>
-          <li><a href="pitch.html">Pitch Deck</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Menu <i class="fas fa-caret-down"></i></a>
+            <div class="dropdown-content">
+              <a href="#hero">Home</a>
+              <a href="#products">About</a>
+              <a href="#business-description">Business</a>
+              <a href="#timeline">Timeline</a>
+              <a href="#demo">Demo</a>
+              <a href="#our-team">Our Team</a>
+              <a href="pitch.html">Pitch Deck</a>
+            </div>
+          </li>
         </ul>
+        <a href="https://archoops.net/login" class="login-btn">Sign Up / Login</a>
       </nav>
     </div>
   </header>
@@ -57,7 +63,7 @@
       </p>
     </div>
     <div class="hero-img">
-      <div class="img-placeholder"><img src="assets/site-images/homescreen.png" alt="ArcHoops Student Home Screen"></div>
+      <div class="img-placeholder"><img src="site-assets/images/homescreen.png" alt="ArcHoops Student Home Screen"></div>
     </div>
   </section>
 
@@ -74,7 +80,7 @@
             <!-- <div class="img-placeholder small">Learn Image</div> -->
             <i class="fas fa-graduation-cap icon"></i>
             <h3>Learn</h3>
-            <div class="img-placeholder small"><img src="assets/site-images/Learn.png"
+            <div class="img-placeholder small"><img src="site-assets/images/Learn.png"
                 alt="Screenshot of Learn panel in application">
             </div>
             <p>Students explore basketball analytics and data-driven decision-making through interactive video lessons
@@ -85,7 +91,7 @@
             <!-- <div class="img-placeholder small">Practice Image</div> -->
             <i class="fas fa-gamepad icon"></i>
             <h3>Practice</h3>
-            <div class="img-placeholder small"><img src="assets/site-images/Practice.png"
+            <div class="img-placeholder small"><img src="site-assets/images/Practice.png"
                 alt="Screenshot of Practice panel in application"></div>
             <p>They apply what they've learned by predicting key metrics for upcoming NBA games using historical data.
             </p>
@@ -94,7 +100,7 @@
             <!-- <div class="img-placeholder small">Compare Image</div> -->
             <i class="fas fa-trophy icon"></i>
             <h3>Compare</h3>
-            <div class="img-placeholder small"><img src="assets/site-images/Compare.png"
+            <div class="img-placeholder small"><img src="site-assets/images/Compare.png"
                 alt="Screenshot of Compare panel in application"></div>
             <p>Students earn points based on prediction accuracy, compare with friends and classmates, and compete to
               improve
@@ -113,7 +119,7 @@
       <div class="card">
         <div class="img-placeholder small">Learn Image</div>
         <h3>Learn</h3>
-        <div class="img-placeholder small"><img src="assets/site-images/Learn.png" alt="Screenshot of Learn panel in application">
+        <div class="img-placeholder small"><img src="site-assets/images/Learn.png" alt="Screenshot of Learn panel in application">
         </div>
         <p>Kids explore basketball analytics and data-driven decision-making through interactive video lessons delivered
           by their favorite players.</p>
@@ -121,14 +127,14 @@
       <div class="card">
         <div class="img-placeholder small">Practice Image</div>
         <h3>Practice</h3>
-        <div class="img-placeholder small"><img src="assets/site-images/Practice.png"
+        <div class="img-placeholder small"><img src="site-assets/images/Practice.png"
             alt="Screenshot of Practice panel in application"></div>
         <p>They apply what they've learned by predicting key metrics for upcoming NBA games using historical data.</p>
       </div>
       <div class="card">
         <div class="img-placeholder small">Compare Image</div>
         <h3>Compare</h3>
-        <div class="img-placeholder small"><img src="assets/site-images/Compare.png"
+        <div class="img-placeholder small"><img src="site-assets/images/Compare.png"
             alt="Screenshot of Compare panel in application"></div>
         <p>Earn points based on prediction accuracy, compare with friends and classmates, and compete to improve stats.
         </p>
@@ -328,7 +334,7 @@
       <div class="card">
         <!-- <div class="img-placeholder small">Learn Image</div> -->
         <h3>Ronald Dupree</h3>
-        <div class="img-placeholder small headshot"><img src="assets/site-images/ronald.jpg" alt="Headshot of Ronald Dupree"></div>
+        <div class="img-placeholder small headshot"><img src="site-assets/images/ronald.jpg" alt="Headshot of Ronald Dupree"></div>
         <p>Chief Executive Officer<br>
           Former NBA Player<br>
           General Manager, LSU Men's Basketball</p>
@@ -336,7 +342,7 @@
       <div class="card">
         <!-- <div class="img-placeholder small">Practice Image</div> -->
         <h3>Ashley Brio</h3>
-        <div class="img-placeholder small headshot"><img src="assets/site-images/ashley.jpg" alt="Headshot of Ashley Brio"></div>
+        <div class="img-placeholder small headshot"><img src="site-assets/images/ashley.jpg" alt="Headshot of Ashley Brio"></div>
         <p>Chief Operating Officer<br>
           Basketball Analytics and Data Science<br>
           2K Sports, Milwaukee Bucks, CMU</p>
@@ -344,7 +350,7 @@
       <div class="card">
         <!-- <div class="img-placeholder small">Practice Image</div> -->
         <h3>Laura Bloch</h3>
-        <div class="img-placeholder small headshot"><img src="assets/site-images/laura.jpg" alt="Headshot of Laura Bloch"></div>
+        <div class="img-placeholder small headshot"><img src="site-assets/images/laura.jpg" alt="Headshot of Laura Bloch"></div>
         <p>Chief Product Officer<br>
           MA Educational Technology<br>
           BS Computer Engineering<br>

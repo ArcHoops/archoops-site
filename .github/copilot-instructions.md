@@ -9,16 +9,16 @@ This is a small, static landing-site repository (single-page marketing site + pi
 
 Key facts and where to look
 - Main entry: `index.html` — the single-page landing markup (sections identified by id attributes like `#hero`, `#learning-model`, `#demo`, etc.).
-- Styling: root `styles.css` is the compiled stylesheet served by the site. Source SCSS: `assets/sass/main.scss` and partials in `assets/sass/libs/`.
-- Images: `assets/site-images/` holds site images referenced directly from HTML.
-- Fonts: `webfonts/` contains local font assets.
-- JS: `assets/js/` contains `jquery.min.js`, `main.js`, `util.js`, and small libs; maintain the existing load order — jQuery first, plugins, then `main.js`.
+- Styling: root `styles.css` is the compiled stylesheet served by the site. Source SCSS: `site-assets/sass/main.scss` and partials in `site-assets/sass/libs/`.
+- Images: `site-assets/images/` holds site images referenced directly from HTML.
+- Fonts: `webfonts/` contains local font site-assets.
+- JS: `site-assets/js/` contains `jquery.min.js`, `main.js`, `util.js`, and small libs; maintain the existing load order — jQuery first, plugins, then `main.js`.
 - Pitch page: `pitch.html` — separate static page for the pitch deck.
 
 Project conventions and patterns
 - This repo uses an HTML5 UP template (see `README.txt` header). Many sections are left commented-out in `index.html`. Avoid deleting commented sections unless instructed.
-- Asset paths are relative and rooted at the repo root (e.g., `<link href="styles.css">`, `<img src="assets/site-images/...">`).
-- If editing styles prefer updating `assets/sass/main.scss` and compiling to `styles.css` (see workflow below) so changes remain maintainable.
+- Asset paths are relative and rooted at the repo root (e.g., `<link href="styles.css">`, `<img src="site-assets/images/...">`).
+- If editing styles prefer updating `site-assets/sass/main.scss` and compiling to `styles.css` (see workflow below) so changes remain maintainable.
 
 Developer workflows (discoverable / recommended)
 - Quick local test (static): run a simple static server from repo root and open `http://localhost:8000`.
@@ -27,15 +27,15 @@ Developer workflows (discoverable / recommended)
     python3 -m http.server 8000
     open http://localhost:8000
     ```
-- Compile SCSS -> CSS (if you change `assets/sass/*.scss`):
+- Compile SCSS -> CSS (if you change `site-assets/sass/*.scss`):
   - Example using Dart Sass (install `sass` if needed):
     ```bash
-    sass assets/sass/main.scss:styles.css --no-source-map
+    sass site-assets/sass/main.scss:styles.css --no-source-map
     ```
   - Note: `index.html` links `styles.css` in the repo root, so compile output should overwrite that file.
 
 Integration & external dependencies
-- FontAwesome: a kit script is injected in `index.html` (external). There is also a local `assets/css/fontawesome-all.min.css` asset — be careful when changing icons or removing the kit.
+- FontAwesome: a kit script is injected in `index.html` (external). There is also a local `site-assets/css/fontawesome-all.min.css` asset — be careful when changing icons or removing the kit.
 - Embedded content: YouTube iframe in `#demo`, and an outbound Google Forms link for signups. These are external by design and not served from repo.
 
 Guidance for AI edits
@@ -48,9 +48,9 @@ Files to check when editing
 - `index.html` (landing page)
 - `pitch.html` (pitch deck page)
 - `styles.css` (served stylesheet)
-- `assets/sass/main.scss` + `assets/sass/libs/` (style sources)
-- `assets/js/main.js` and `assets/js/util.js` (site behavior)
-- `assets/site-images/` and `webfonts/` for media and fonts
+- `site-assets/sass/main.scss` + `site-assets/sass/libs/` (style sources)
+- `site-assets/js/main.js` and `site-assets/js/util.js` (site behavior)
+- `site-assets/images/` and `webfonts/` for media and fonts
 
 If anything here is unclear or you want the AI to follow a stricter style or commit convention (commit message prefix, branching rules, formatting), tell us and I will incorporate it.
 
