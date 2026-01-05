@@ -105,6 +105,14 @@ header nav a:hover {
   color: #b52e20;
 }
 
+header .header-buttons {
+  justify-self: flex-end;
+  min-width: 170px;
+  max-width: 250px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 /* HERO */
 .hero {
