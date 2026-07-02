@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" href="/images/archoops-symbol-cropped.png" />
   <link rel="apple-touch-icon" href="/images/archoops-symbol-cropped.png" />
   
-  <link rel="stylesheet" href="styles.css?v=3" />
+  <link rel="stylesheet" href="styles.css?v=4" />
   <script src="https://kit.fontawesome.com/e7390f5b86.js" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="site-assets/js/breakpoints.min.js"></script>
@@ -43,8 +43,7 @@
       </button>
       <nav class="nav" data-visible="false" aria-label="Primary">
         <ul class="nav-list">
-          <li><a href="#products">Product</a></li>
-          <li><a href="#framework">Framework</a></li>
+          <li><a href="#the-framework">Framework</a></li>
           <li><a href="#timeline">Roadmap</a></li>
           <li><a href="#our-team">Team</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -173,47 +172,158 @@
     </div>
   </section>
 
-  <!-- PRODUCTS -->
-  <section id="products" class="content-section light-bg">
-    <h2><i class="fas fa-mobile-screen-button icon"></i> Our Product</h2>
-    <div class="grid">
-      <div class="text">
-        <p>Currently in development, our platform combines education, gaming, and sports to create an engaging learning experience.
+  <!-- THE ARCHOOPS FRAMEWORK -->
+  <section id="the-framework" class="framework-section" aria-labelledby="framework-headline">
+    <div class="framework-section__inner">
+      <header class="framework-header framework-reveal">
+        <p class="framework-kicker">The ArcHoops Framework</p>
+        <h2 id="framework-headline" class="framework-headline">Learning That Feels Like Game Night.</h2>
+        <p class="framework-intro">
+          Students don't memorize statistics. They experience them. Every lesson leads to a prediction. Every prediction becomes a hypothesis. Every game becomes a classroom.
         </p>
-        <div class="grid three-cols">
+      </header>
 
-          <div class="card">
-            <!-- <div class="img-placeholder small">Learn Image</div> -->
-            <i class="fas fa-graduation-cap icon"></i>
-            <h3>Learn</h3>
-            <div class="img-placeholder small"><img src="site-assets/images/Learn.png"
-                alt="Screenshot of Learn panel in application">
+      <nav class="framework-progress" aria-label="Framework progress">
+        <ol class="framework-progress__list">
+          <li class="framework-progress__item is-active" data-step="study">
+            <span class="framework-progress__dot" aria-hidden="true"></span>
+            <span class="framework-progress__label">Study</span>
+          </li>
+          <li class="framework-progress__arrow" aria-hidden="true">&rarr;</li>
+          <li class="framework-progress__item" data-step="predict">
+            <span class="framework-progress__dot" aria-hidden="true"></span>
+            <span class="framework-progress__label">Predict</span>
+          </li>
+          <li class="framework-progress__arrow" aria-hidden="true">&rarr;</li>
+          <li class="framework-progress__item" data-step="observe">
+            <span class="framework-progress__dot" aria-hidden="true"></span>
+            <span class="framework-progress__label">Observe</span>
+          </li>
+          <li class="framework-progress__arrow" aria-hidden="true">&rarr;</li>
+          <li class="framework-progress__item" data-step="reflect">
+            <span class="framework-progress__dot" aria-hidden="true"></span>
+            <span class="framework-progress__label">Reflect</span>
+          </li>
+        </ol>
+      </nav>
+
+      <div class="framework-chapters">
+        <article class="framework-chapter framework-chapter--study framework-reveal" data-step="study" id="framework-study">
+          <div class="framework-chapter__visual">
+            <div class="framework-visual__stage">
+              <div class="framework-visual__glow" aria-hidden="true"></div>
+              <div class="hero-browser framework-browser">
+                <div class="hero-browser__viewport" id="framework-study-screenshot">
+                  <img
+                    src="site-assets/images/framework-study.png"
+                    width="595"
+                    height="422"
+                    alt="ArcHoops lesson screen showing Lesson 5: Three-Point Volume & Rate with 50% progress and a Resume Lesson button"
+                    loading="lazy"
+                    decoding="async">
+                </div>
+              </div>
             </div>
-            <p>Students explore basketball analytics and data-driven decision-making through interactive video lessons
-              delivered
-              by their favorite players.</p>
           </div>
-          <div class="card">
-            <!-- <div class="img-placeholder small">Practice Image</div> -->
-            <i class="fas fa-gamepad icon"></i>
-            <h3>Practice</h3>
-            <div class="img-placeholder small"><img src="site-assets/images/Practice.png"
-                alt="Screenshot of Practice panel in application"></div>
-            <p>They apply what they've learned by predicting key metrics for upcoming NBA games using historical data.
-            </p>
+          <div class="framework-chapter__content">
+            <p class="framework-chapter__step">Study</p>
+            <h3 class="framework-chapter__headline">Study</h3>
+            <p class="framework-chapter__copy">Students learn one basketball concept at a time before making predictions.</p>
+            <ul class="framework-chapter__bullets">
+              <li>Bite-sized lessons</li>
+              <li>Real basketball examples</li>
+              <li>Built for middle school learners</li>
+            </ul>
           </div>
-          <div class="card">
-            <!-- <div class="img-placeholder small">Compare Image</div> -->
-            <i class="fas fa-trophy icon"></i>
-            <h3>Compare</h3>
-            <div class="img-placeholder small"><img src="site-assets/images/Compare.png"
-                alt="Screenshot of Compare panel in application"></div>
-            <p>Students earn points based on prediction accuracy, compare with friends and classmates, and compete to
-              improve
-              stats.
-            </p>
+        </article>
+
+        <article class="framework-chapter framework-chapter--predict framework-reveal" data-step="predict" id="framework-predict">
+          <div class="framework-chapter__visual">
+            <div class="framework-visual__stage">
+              <div class="framework-visual__glow" aria-hidden="true"></div>
+              <div class="hero-browser framework-browser">
+                <div class="hero-browser__viewport" id="framework-predict-screenshot">
+                  <img
+                    src="site-assets/images/framework-predict.png"
+                    width="1024"
+                    height="523"
+                    alt="ArcHoops prediction screen showing Make Your Predictions for New York Liberty vs Golden State Valkyries with team winner, final score, and Coach's Read insights"
+                    loading="lazy"
+                    decoding="async">
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+          <div class="framework-chapter__content">
+            <p class="framework-chapter__step">Predict</p>
+            <h3 class="framework-chapter__headline">Predict</h3>
+            <p class="framework-chapter__copy">Students apply what they learned by making predictions before the game begins.</p>
+            <ul class="framework-chapter__bullets">
+              <li>Win probability</li>
+              <li>Final score</li>
+              <li>Three-pointers</li>
+              <li>Shooting efficiency</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="framework-chapter framework-chapter--observe framework-reveal" data-step="observe" id="framework-observe">
+          <div class="framework-chapter__visual">
+            <div class="framework-visual__stage">
+              <div class="framework-visual__glow" aria-hidden="true"></div>
+              <div class="hero-browser framework-browser">
+                <div class="hero-browser__viewport" id="framework-observe-screenshot">
+                  <img
+                    src="site-assets/images/framework-observe.png"
+                    width="1024"
+                    height="602"
+                    alt="ArcHoops live game observe screen showing Liberty vs Valkyries scoreboard, live win probability chart, play-by-play log, and predictions compared to live stats"
+                    loading="lazy"
+                    decoding="async">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="framework-chapter__content">
+            <p class="framework-chapter__step">Observe</p>
+            <h3 class="framework-chapter__headline">Observe</h3>
+            <p class="framework-chapter__copy">Students compare expectations with real outcomes while the game unfolds.</p>
+            <ul class="framework-chapter__bullets">
+              <li>Live probability</li>
+              <li>Live statistics</li>
+              <li>Momentum tracking</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="framework-chapter framework-chapter--reflect framework-reveal" data-step="reflect" id="framework-reflect">
+          <div class="framework-chapter__visual">
+            <div class="framework-visual__stage">
+              <div class="framework-visual__glow" aria-hidden="true"></div>
+              <div class="hero-browser framework-browser">
+                <div class="hero-browser__viewport" id="framework-reflect-screenshot">
+                  <img
+                    src="site-assets/images/framework-reflect.png"
+                    width="1024"
+                    height="569"
+                    alt="ArcHoops reflect screen showing +120 points earned, prediction scoring breakdown, season stats, and Coach's Film Room analysis after Liberty vs Valkyries"
+                    loading="lazy"
+                    decoding="async">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="framework-chapter__content">
+            <p class="framework-chapter__step">Reflect</p>
+            <h3 class="framework-chapter__headline">Reflect</h3>
+            <p class="framework-chapter__copy">Students receive immediate feedback explaining not only what happened, but why.</p>
+            <ul class="framework-chapter__bullets">
+              <li>Points earned</li>
+              <li>Coach's analysis</li>
+              <li>Performance over time</li>
+            </ul>
+          </div>
+        </article>
       </div>
     </div>
   </section>

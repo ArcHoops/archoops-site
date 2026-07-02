@@ -61,6 +61,55 @@
 				$hero.addClass('is-ready');
 			});
 		}
+
+		// Framework section: scroll reveal + progress highlighting
+		const frameworkSection = document.getElementById('the-framework');
+		if (frameworkSection) {
+			const revealElements = frameworkSection.querySelectorAll('.framework-reveal');
+			const progressItems = frameworkSection.querySelectorAll('.framework-progress__item');
+			const chapters = frameworkSection.querySelectorAll('.framework-chapter');
+			const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+			if (prefersReducedMotion) {
+				revealElements.forEach(function(el) {
+					el.classList.add('is-visible');
+				});
+			} else if ('IntersectionObserver' in window) {
+				const revealObserver = new IntersectionObserver(function(entries) {
+					entries.forEach(function(entry) {
+						if (entry.isIntersecting) {
+							entry.target.classList.add('is-visible');
+							revealObserver.unobserve(entry.target);
+						}
+					});
+				}, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+
+				revealElements.forEach(function(el) {
+					revealObserver.observe(el);
+				});
+			} else {
+				revealElements.forEach(function(el) {
+					el.classList.add('is-visible');
+				});
+			}
+
+			if ('IntersectionObserver' in window && chapters.length && progressItems.length) {
+				const stepObserver = new IntersectionObserver(function(entries) {
+					entries.forEach(function(entry) {
+						if (entry.isIntersecting) {
+							const step = entry.target.getAttribute('data-step');
+							progressItems.forEach(function(item) {
+								item.classList.toggle('is-active', item.getAttribute('data-step') === step);
+							});
+						}
+					});
+				}, { threshold: 0.45, rootMargin: '-20% 0px -35% 0px' });
+
+				chapters.forEach(function(chapter) {
+					stepObserver.observe(chapter);
+				});
+			}
+		}
 	});
 
 })(jQuery);
