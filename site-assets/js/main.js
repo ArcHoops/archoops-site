@@ -208,6 +208,40 @@
 				});
 			}
 		}
+
+		// Team section: scroll reveal with staggered cards
+		const teamSection = document.getElementById('our-team');
+		if (teamSection) {
+			const revealElements = teamSection.querySelectorAll('.team-reveal');
+			const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+			let teamRevealed = false;
+
+			function revealTeamSection() {
+				if (teamRevealed) return;
+				teamRevealed = true;
+				teamSection.classList.add('is-visible');
+				revealElements.forEach(function(el) {
+					el.classList.add('is-visible');
+				});
+			}
+
+			if (prefersReducedMotion) {
+				revealTeamSection();
+			} else if ('IntersectionObserver' in window) {
+				const teamObserver = new IntersectionObserver(function(entries) {
+					entries.forEach(function(entry) {
+						if (entry.isIntersecting) {
+							revealTeamSection();
+							teamObserver.unobserve(entry.target);
+						}
+					});
+				}, { threshold: 0.12, rootMargin: '0px 0px -5% 0px' });
+
+				teamObserver.observe(teamSection);
+			} else {
+				revealTeamSection();
+			}
+		}
 	});
 
 })(jQuery);
