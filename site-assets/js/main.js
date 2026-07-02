@@ -242,6 +242,40 @@
 				revealTeamSection();
 			}
 		}
+
+		// Footer section: scroll reveal
+		const footerSection = document.getElementById('contact');
+		if (footerSection && footerSection.classList.contains('site-footer')) {
+			const revealElements = footerSection.querySelectorAll('.footer-reveal');
+			const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+			let footerRevealed = false;
+
+			function revealFooterSection() {
+				if (footerRevealed) return;
+				footerRevealed = true;
+				footerSection.classList.add('is-visible');
+				revealElements.forEach(function(el) {
+					el.classList.add('is-visible');
+				});
+			}
+
+			if (prefersReducedMotion) {
+				revealFooterSection();
+			} else if ('IntersectionObserver' in window) {
+				const footerObserver = new IntersectionObserver(function(entries) {
+					entries.forEach(function(entry) {
+						if (entry.isIntersecting) {
+							revealFooterSection();
+							footerObserver.unobserve(entry.target);
+						}
+					});
+				}, { threshold: 0.12, rootMargin: '0px 0px -5% 0px' });
+
+				footerObserver.observe(footerSection);
+			} else {
+				revealFooterSection();
+			}
+		}
 	});
 
 })(jQuery);
