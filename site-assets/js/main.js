@@ -26,11 +26,22 @@
 			}, 100);
 		});
 
-	// Mobile menu toggle
+	// Mobile menu toggle + transparent header scroll state
 	$(document).ready(function() {
 		const $navToggle = $('.nav-toggle');
 		const $nav = $('.nav');
-		
+		const $header = $('.site-header');
+		const $hero = $('#hero');
+
+		function updateHeaderState() {
+			if (!$header.length) return;
+			const threshold = $hero.length ? Math.min($hero.outerHeight() * 0.12, 80) : 40;
+			$header.toggleClass('is-scrolled', $(window).scrollTop() > threshold);
+		}
+
+		updateHeaderState();
+		$(window).on('scroll', updateHeaderState);
+
 		$navToggle.on('click', function(e) {
 			e.preventDefault();
 			const isVisible = $nav.attr('data-visible') === 'true';
@@ -43,6 +54,13 @@
 			$nav.attr('data-visible', 'false');
 			$navToggle.attr('aria-expanded', 'false');
 		});
+
+		// Hero entrance animations
+		if ($hero.length) {
+			window.requestAnimationFrame(function() {
+				$hero.addClass('is-ready');
+			});
+		}
 	});
 
 })(jQuery);
