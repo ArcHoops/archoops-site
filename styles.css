@@ -278,8 +278,8 @@ body {
 /* HERO */
 .hero {
   position: relative;
-  min-height: 90vh;
-  padding: calc(var(--header-height) + var(--hero-header-gap)) 64px 80px;
+  min-height: auto;
+  padding: calc(var(--header-height) + var(--hero-header-gap)) 64px 3rem;
   background: var(--color-bg-warm);
   color: var(--color-dark);
   overflow-x: visible;
@@ -481,7 +481,7 @@ body {
   width: 100%;
   max-width: 585px;
   margin: 0 auto;
-  padding: 2.25rem 0;
+  padding: 1.25rem 0 0.5rem;
 }
 
 .hero-visual__glow {
@@ -665,7 +665,7 @@ body {
 .framework-section {
   background: var(--color-bg-warm);
   color: var(--color-dark);
-  padding: 6rem 64px 8rem;
+  padding: 4rem 64px 8rem;
   border-top: 1px solid var(--color-line);
 }
 
@@ -1076,7 +1076,7 @@ body {
 
 @media (max-width: 1024px) {
   .framework-section {
-    padding: 5rem 40px 6rem;
+    padding: 3.5rem 40px 6rem;
   }
 
   .framework-chapter,
@@ -2138,7 +2138,7 @@ body {
 
   .hero-container {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 2rem;
   }
 
   .hero-content {
