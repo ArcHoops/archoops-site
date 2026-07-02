@@ -50,7 +50,7 @@
 		});
 
 		// Close menu when clicking a link
-		$('.nav-list a').on('click', function() {
+		$('.nav-list a, .nav-actions a').on('click', function() {
 			$nav.attr('data-visible', 'false');
 			$navToggle.attr('aria-expanded', 'false');
 		});

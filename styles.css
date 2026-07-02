@@ -162,6 +162,10 @@ body {
   gap: 2rem;
 }
 
+.nav-actions {
+  display: none;
+}
+
 .site-header nav a {
   color: var(--color-gray);
   text-decoration: none;
@@ -1111,14 +1115,13 @@ body {
     padding: 4rem 24px 5rem;
   }
 
+  .framework-progress {
+    display: none;
+  }
+
   .framework-header {
     margin-bottom: 2.5rem;
     text-align: left;
-  }
-
-  .framework-progress {
-    margin-bottom: 3rem;
-    padding: 0.75rem 1rem;
   }
 
   .framework-chapter {
@@ -1154,6 +1157,12 @@ body {
     margin-top: 3.5rem;
     padding-top: 2.5rem;
     text-align: left;
+  }
+
+  .framework-closing .btn {
+    display: flex;
+    width: fit-content;
+    margin-inline: auto;
   }
 }
 
@@ -2044,16 +2053,29 @@ body {
   .site-footer__content {
     grid-template-columns: 1fr;
     gap: 2rem;
-    align-items: start;
+    align-items: center;
+    text-align: center;
+  }
+
+  .site-footer__brand {
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
 
   .site-footer__contact {
-    justify-self: start;
-    text-align: left;
+    justify-self: center;
+    align-items: center;
+    text-align: center;
   }
 
   .site-footer__social {
-    justify-content: flex-start;
+    justify-content: center;
+  }
+
+  .site-footer__social a {
+    width: 2.75rem;
+    height: 2.75rem;
   }
 
   .site-footer__actions {
@@ -2160,7 +2182,11 @@ body {
   }
 
   .nav-toggle {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
     z-index: 1001;
     grid-area: toggle;
   }
@@ -2175,6 +2201,9 @@ body {
 
   .nav {
     position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background: var(--color-white);
     width: 100%;
     height: 100vh;
@@ -2197,8 +2226,28 @@ body {
     align-items: center;
   }
 
-  .site-header nav a {
+  .nav-actions {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 280px;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--color-line);
+  }
+
+  .site-header .nav-list a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0.65rem 1.25rem;
     font-size: 1.1rem;
+  }
+
+  .site-header .nav-actions .btn {
+    width: 100%;
+    min-height: var(--btn-height-md);
   }
 
   .hero {
@@ -2286,11 +2335,21 @@ body {
   }
 
   .hero-float-card {
-    max-width: 124px;
-    padding: 0.55rem 0.65rem;
+    max-width: 152px;
+    padding: 0.5rem 0.7rem;
   }
 
   .hero-float-card__value {
     font-size: 0.75rem;
+  }
+
+  .hero-float-card__label {
+    white-space: nowrap;
+    font-size: 0.625rem;
+    letter-spacing: 0.01em;
+  }
+
+  .hero-float-card--probability .hero-float-card__label {
+    font-size: 0.58rem;
   }
 }
