@@ -1,8 +1,8 @@
 /* Base resets & typography */
 :root {
-  --color-orange: #e07b1c;
-  --color-orange-dark: #c96a14;
-  --color-orange-light: #f47f00;
+  --color-orange: #f47816;
+  --color-orange-dark: #d96512;
+  --color-orange-light: #f47816;
   --color-red: #b52e20;
   --color-dark: #1a1a1a;
   --color-gray: #6b7280;
@@ -20,6 +20,7 @@
   --shadow-card: 0 8px 32px rgba(26, 26, 26, 0.08);
   --hero-max-width: 1440px;
   --header-height: 80px;
+  --hero-header-gap: 48px;
   --btn-height-md: 2.5rem;
   --btn-height-sm: 2.125rem;
   --btn-padding-x-md: 1.15rem;
@@ -55,8 +56,8 @@ body {
   right: 0;
   z-index: 1000;
   height: var(--header-height);
-  background: transparent;
-  border-bottom: 1px solid transparent;
+  background: var(--color-bg-warm);
+  border-bottom: 1px solid var(--color-line);
   transition: background 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
 }
 
@@ -253,7 +254,7 @@ body {
 
 .btn-secondary:hover {
   border-color: var(--color-orange);
-  background: rgba(224, 123, 28, 0.04);
+  background: rgba(244, 120, 22, 0.04);
 }
 
 .btn-secondary i {
@@ -274,7 +275,7 @@ body {
 .hero {
   position: relative;
   min-height: 90vh;
-  padding: calc(var(--header-height) + 48px) 64px 80px;
+  padding: calc(var(--header-height) + var(--hero-header-gap)) 64px 80px;
   background: var(--color-bg-warm);
   color: var(--color-dark);
   overflow-x: visible;
@@ -335,7 +336,7 @@ body {
   max-width: var(--hero-max-width);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 38% 62%;
+  grid-template-columns: 34% 66%;
   gap: 1.5rem;
   align-items: center;
   overflow: visible;
@@ -407,8 +408,19 @@ body {
   justify-content: center;
   width: 36px;
   height: 36px;
-  color: #8b7355;
+  color: var(--color-orange);
+  --fa-primary-color: var(--color-orange);
+  --fa-secondary-color: var(--color-orange);
   font-size: 0.95rem;
+}
+
+.hero-framework__icon i,
+.hero-framework__icon svg {
+  color: var(--color-orange);
+}
+
+.hero-framework__icon svg path {
+  fill: var(--color-orange);
 }
 
 .hero-framework__label {
@@ -416,7 +428,7 @@ body {
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #8b7355;
+  color: #000000;
 }
 
 .hero-framework__arrow {
@@ -463,7 +475,7 @@ body {
 .hero-visual__stage {
   position: relative;
   width: 100%;
-  max-width: 720px;
+  max-width: 585px;
   margin: 0 auto;
   padding: 2.25rem 0;
 }
@@ -475,7 +487,7 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background: radial-gradient(ellipse at center, rgba(244, 127, 0, 0.14) 0%, rgba(244, 127, 0, 0.04) 45%, transparent 70%);
+  background: radial-gradient(ellipse at center, rgba(244, 120, 22, 0.14) 0%, rgba(244, 120, 22, 0.04) 45%, transparent 70%);
   pointer-events: none;
 }
 
@@ -484,9 +496,9 @@ body {
   z-index: 2;
   width: 100%;
   margin: 0;
-  padding: 12px;
+  padding: 8px;
   background: #111111;
-  border: 3px solid #0a0a0a;
+  border: 2px solid #0a0a0a;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-soft);
   overflow: hidden;
@@ -507,22 +519,26 @@ body {
 
 .hero-browser__viewport {
   overflow: hidden;
-  border-radius: 10px;
-  background: #111111;
+  border-radius: 8px;
   line-height: 0;
+}
+
+.hero-browser__viewport picture {
+  display: block;
 }
 
 .hero-browser__viewport img {
   display: block;
   width: 100%;
   height: auto;
+  vertical-align: top;
 }
 
 /* Floating UI cards */
 .hero-float-card {
   position: absolute;
   z-index: 3;
-  display: none;
+  display: grid;
   grid-template-columns: auto 1fr;
   column-gap: 0.65rem;
   row-gap: 0.1rem;
@@ -594,7 +610,7 @@ body {
 }
 
 .hero-float-card--probability {
-  bottom: 15%;
+  bottom: calc(15% - 76px);
   left: -42px;
 }
 
@@ -604,8 +620,9 @@ body {
 }
 
 .hero-float-card--rank {
-  top: 40%;
-  right: -46px;
+  top: auto;
+  bottom: 32%;
+  right: calc(-28px - 76px);
 }
 
 .hero-float-card--picks {
@@ -648,7 +665,7 @@ body {
 }
 .content-section h2 {
   text-align: center;
-  color: #f47f00;
+  color: var(--color-orange);
   margin-bottom: 2rem;
 }
 .light-bg {
@@ -765,7 +782,7 @@ body {
   margin-top: 2rem;
 }
 .timeline-item {
-  background: #f47f00;
+  background: var(--color-orange);
   color: #fff;
   border-left: 6px solid #b52e20;
   border-radius: 10px;
@@ -826,7 +843,7 @@ body {
 
 /* FOOTER */
 footer {
-  background: #f47f00;
+  background: var(--color-orange);
   color: #fff;
   text-align: center;
   padding: 1rem;
@@ -853,7 +870,7 @@ footer {
   }
 
   .hero-visual__stage {
-    max-width: 660px;
+    max-width: 540px;
   }
 }
 
@@ -899,7 +916,7 @@ footer {
   }
 
   .hero-visual__stage {
-    max-width: 640px;
+    max-width: 518px;
     margin: 0 auto;
   }
 }
@@ -955,12 +972,12 @@ footer {
   }
 
   .hero {
-    padding: calc(var(--header-height) + 32px) 24px 64px;
+    padding: calc(var(--header-height) + 36px) 24px 64px;
     overflow-x: clip;
   }
 
   .hero-visual__stage {
-    max-width: 560px;
+    max-width: 450px;
     margin: 0 auto;
   }
 
@@ -980,7 +997,7 @@ footer {
   }
 
   .hero-float-card--probability {
-    bottom: 12%;
+    bottom: calc(12% - 66px);
     left: -8px;
   }
 
@@ -1035,7 +1052,7 @@ footer {
   }
 
   .hero-visual__stage {
-    max-width: 460px;
+    max-width: 518px;
   }
 
   .hero-float-card {

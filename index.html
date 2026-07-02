@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" href="/images/archoops-symbol-cropped.png" />
   <link rel="apple-touch-icon" href="/images/archoops-symbol-cropped.png" />
   
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=3" />
   <script src="https://kit.fontawesome.com/e7390f5b86.js" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="site-assets/js/breakpoints.min.js"></script>
@@ -124,7 +124,20 @@
         <div class="hero-visual__stage">
           <div class="hero-browser">
             <div class="hero-browser__viewport">
-              <img src="site-assets/images/hero-home-dashboard.png" alt="ArcHoops home dashboard showing today's mission, learning progress, XP stats, and class leaderboard">
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="site-assets/images/hero-home-dashboard.webp 1x, site-assets/images/hero-home-dashboard@2x.webp 2x">
+                <img
+                  src="site-assets/images/hero-home-dashboard.png"
+                  srcset="site-assets/images/hero-home-dashboard.png 1x, site-assets/images/hero-home-dashboard@2x.png 2x"
+                  width="1024"
+                  height="522"
+                  alt="ArcHoops home dashboard showing today's mission, learning progress, XP stats, and class leaderboard"
+                  loading="eager"
+                  fetchpriority="high"
+                  decoding="async">
+              </picture>
             </div>
           </div>
 
