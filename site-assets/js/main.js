@@ -94,12 +94,23 @@
 			}
 
 			if ('IntersectionObserver' in window && chapters.length && progressItems.length) {
+				const loopSteps = ['study', 'predict', 'observe', 'reflect'];
+
 				const stepObserver = new IntersectionObserver(function(entries) {
 					entries.forEach(function(entry) {
 						if (entry.isIntersecting) {
 							const step = entry.target.getAttribute('data-step');
+							const activeIndex = loopSteps.indexOf(step);
+
 							progressItems.forEach(function(item) {
-								item.classList.toggle('is-active', item.getAttribute('data-step') === step);
+								const itemStep = item.getAttribute('data-step');
+								const itemIndex = loopSteps.indexOf(itemStep);
+								item.classList.toggle('is-active', itemStep === step);
+								item.classList.toggle('is-passed', itemIndex >= 0 && itemIndex < activeIndex);
+							});
+
+							chapters.forEach(function(chapter) {
+								chapter.classList.toggle('is-in-view', chapter.getAttribute('data-step') === step);
 							});
 						}
 					});

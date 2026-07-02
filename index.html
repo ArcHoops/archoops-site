@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" href="/images/archoops-symbol-cropped.png" />
   <link rel="apple-touch-icon" href="/images/archoops-symbol-cropped.png" />
   
-  <link rel="stylesheet" href="styles.css?v=4" />
+  <link rel="stylesheet" href="styles.css?v=9" />
   <script src="https://kit.fontawesome.com/e7390f5b86.js" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="site-assets/js/breakpoints.min.js"></script>
@@ -177,13 +177,14 @@
     <div class="framework-section__inner">
       <header class="framework-header framework-reveal">
         <p class="framework-kicker">The ArcHoops Framework</p>
-        <h2 id="framework-headline" class="framework-headline">Learning That Feels Like Game Night.</h2>
+        <h2 id="framework-headline" class="framework-headline">The ArcHoops Learning Loop</h2>
         <p class="framework-intro">
-          Students don't memorize statistics. They experience them. Every lesson leads to a prediction. Every prediction becomes a hypothesis. Every game becomes a classroom.
+          Students don't memorize statistics. They experience them.<br>
+          Every lesson leads to a prediction. Every prediction becomes a hypothesis. Every game becomes a classroom.
         </p>
       </header>
 
-      <nav class="framework-progress" aria-label="Framework progress">
+      <nav class="framework-progress" aria-label="Learning loop progress">
         <ol class="framework-progress__list">
           <li class="framework-progress__item is-active" data-step="study">
             <span class="framework-progress__dot" aria-hidden="true"></span>
@@ -214,13 +215,20 @@
               <div class="framework-visual__glow" aria-hidden="true"></div>
               <div class="hero-browser framework-browser">
                 <div class="hero-browser__viewport" id="framework-study-screenshot">
-                  <img
-                    src="site-assets/images/framework-study.png"
-                    width="595"
-                    height="422"
-                    alt="ArcHoops lesson screen showing Lesson 5: Three-Point Volume & Rate with 50% progress and a Resume Lesson button"
-                    loading="lazy"
-                    decoding="async">
+                  <div class="lesson-card" role="img" aria-label="ArcHoops lesson screen showing Lesson 5: Three-Point Volume & Rate at 50% complete with a Resume Lesson button">
+                    <span class="lesson-card__watermark" aria-hidden="true">5</span>
+                    <p class="lesson-card__kicker">Continue Learning</p>
+                    <h4 class="lesson-card__title">Lesson 5</h4>
+                    <p class="lesson-card__subtitle">Three-Point Volume &amp; Rate</p>
+                    <p class="lesson-card__progress-label">50% Complete</p>
+                    <div class="lesson-card__progress-track">
+                      <div class="lesson-card__progress-fill"></div>
+                    </div>
+                    <span class="lesson-card__button">
+                      <i class="fas fa-play" aria-hidden="true"></i>
+                      Resume Lesson
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -228,11 +236,11 @@
           <div class="framework-chapter__content">
             <p class="framework-chapter__step">Study</p>
             <h3 class="framework-chapter__headline">Study</h3>
-            <p class="framework-chapter__copy">Students learn one basketball concept at a time before making predictions.</p>
+            <p class="framework-chapter__copy">Students build basketball knowledge that powers smarter predictions.</p>
             <ul class="framework-chapter__bullets">
               <li>Bite-sized lessons</li>
               <li>Real basketball examples</li>
-              <li>Built for middle school learners</li>
+              <li>Built for curious learners</li>
             </ul>
           </div>
         </article>
@@ -257,12 +265,12 @@
           <div class="framework-chapter__content">
             <p class="framework-chapter__step">Predict</p>
             <h3 class="framework-chapter__headline">Predict</h3>
-            <p class="framework-chapter__copy">Students apply what they learned by making predictions before the game begins.</p>
+            <p class="framework-chapter__copy">Students apply what they learned by making predictions before tip-off.</p>
             <ul class="framework-chapter__bullets">
-              <li>Win probability</li>
-              <li>Final score</li>
-              <li>Three-pointers</li>
-              <li>Shooting efficiency</li>
+              <li>Pick the winner</li>
+              <li>Predict the final score</li>
+              <li>Estimate key team stats</li>
+              <li>Earn points for accuracy</li>
             </ul>
           </div>
         </article>
@@ -287,11 +295,12 @@
           <div class="framework-chapter__content">
             <p class="framework-chapter__step">Observe</p>
             <h3 class="framework-chapter__headline">Observe</h3>
-            <p class="framework-chapter__copy">Students compare expectations with real outcomes while the game unfolds.</p>
+            <p class="framework-chapter__copy">Students watch their predictions come alive in real time as momentum shifts throughout the game.</p>
             <ul class="framework-chapter__bullets">
-              <li>Live probability</li>
-              <li>Live statistics</li>
-              <li>Momentum tracking</li>
+              <li>Live win probability</li>
+              <li>Compare predictions vs reality</li>
+              <li>Track momentum shifts</li>
+              <li>Learn from every possession</li>
             </ul>
           </div>
         </article>
@@ -316,14 +325,21 @@
           <div class="framework-chapter__content">
             <p class="framework-chapter__step">Reflect</p>
             <h3 class="framework-chapter__headline">Reflect</h3>
-            <p class="framework-chapter__copy">Students receive immediate feedback explaining not only what happened, but why.</p>
+            <p class="framework-chapter__copy">Every prediction becomes a learning opportunity. Students discover not just what happened—but why.</p>
             <ul class="framework-chapter__bullets">
               <li>Points earned</li>
               <li>Coach's analysis</li>
               <li>Performance over time</li>
+              <li>Clear next steps</li>
             </ul>
           </div>
         </article>
+      </div>
+
+      <div class="framework-closing framework-reveal">
+        <h3 class="framework-closing__headline">One Game Teaches a Lesson. A Season Builds Intuition.</h3>
+        <p class="framework-closing__copy">ArcHoops turns repeated predictions, live results, and reflection into a habit of analytical thinking.</p>
+        <a class="btn btn-primary btn-primary--orange" href="connect.html">Request a Classroom Demo</a>
       </div>
     </div>
   </section>
