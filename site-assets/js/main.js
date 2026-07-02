@@ -121,6 +121,93 @@
 				});
 			}
 		}
+
+		// Video section: scroll reveal + inline YouTube playback
+		const videoSection = document.getElementById('watch-demo');
+		const videoPlayer = videoSection ? videoSection.querySelector('.video-player') : null;
+
+		if (videoSection) {
+			const revealElements = videoSection.querySelectorAll('.video-reveal');
+			const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+			let videoRevealed = false;
+
+			function revealVideoSection() {
+				if (videoRevealed) return;
+				videoRevealed = true;
+				videoSection.classList.add('is-visible');
+				revealElements.forEach(function(el) {
+					el.classList.add('is-visible');
+				});
+			}
+
+			function maybeRevealVideoSection() {
+				if (videoRevealed) return;
+				const rect = videoSection.getBoundingClientRect();
+				const inView = rect.top < window.innerHeight * 0.92 && rect.bottom > window.innerHeight * 0.08;
+				if (inView) {
+					revealVideoSection();
+				}
+			}
+
+			if (prefersReducedMotion) {
+				revealVideoSection();
+			} else if ('IntersectionObserver' in window) {
+				const videoObserver = new IntersectionObserver(function(entries) {
+					entries.forEach(function(entry) {
+						if (entry.isIntersecting) {
+							revealVideoSection();
+							videoObserver.unobserve(entry.target);
+						}
+					});
+				}, { threshold: 0.12, rootMargin: '0px 0px -5% 0px' });
+
+				videoObserver.observe(videoSection);
+				window.addEventListener('scroll', maybeRevealVideoSection, { passive: true });
+			} else {
+				revealVideoSection();
+			}
+
+			document.querySelectorAll('a[href="#watch-demo"]').forEach(function(link) {
+				link.addEventListener('click', function() {
+					window.setTimeout(maybeRevealVideoSection, 50);
+					window.setTimeout(maybeRevealVideoSection, 400);
+				});
+			});
+
+			window.addEventListener('hashchange', maybeRevealVideoSection);
+
+			if (window.location.hash === '#watch-demo') {
+				window.setTimeout(maybeRevealVideoSection, 100);
+				window.setTimeout(maybeRevealVideoSection, 600);
+			}
+		}
+
+		if (videoPlayer) {
+			const trigger = videoPlayer.querySelector('.video-player__trigger');
+			const embed = videoPlayer.querySelector('.video-player__embed');
+			const thumb = videoPlayer.querySelector('.video-player__thumb');
+			const videoId = videoPlayer.getAttribute('data-video-id');
+
+			if (thumb) {
+				thumb.addEventListener('error', function() {
+					if (thumb.dataset.fallbackApplied) return;
+					thumb.dataset.fallbackApplied = 'true';
+					thumb.src = 'site-assets/images/hero-home-dashboard.png';
+				});
+			}
+
+			if (trigger && embed && videoId) {
+				trigger.addEventListener('click', function() {
+					videoPlayer.classList.add('is-activating');
+					window.requestAnimationFrame(function() {
+						embed.innerHTML = '<iframe title="ArcHoops Demo Video" src="https://www.youtube.com/embed/' + videoId + '?autoplay=1&rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+						embed.hidden = false;
+						trigger.hidden = true;
+						videoPlayer.classList.add('is-playing');
+					});
+				});
+			}
+		}
 	});
 
 })(jQuery);
