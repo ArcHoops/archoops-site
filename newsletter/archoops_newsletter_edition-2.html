@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ArcHoops — Issue No. 2</title>
+<style>
+  :root{
+    --ink:#1c1917;
+    --court:#e8792b;
+    --court-deep:#c85f16;
+    --muted:#6b6560;
+    --line:#ece7e1;
+    --tint:#fdf4ec;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:#f2ede7;color:var(--ink);
+    font-family:-apple-system,'Helvetica Neue',Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:600px;margin:0 auto;background:#ffffff;}
+  a{color:var(--court-deep);}
+  h1,h2,h3{font-family:Georgia,'Times New Roman',serif;letter-spacing:-.4px;}
+
+  .head{padding:34px 40px 26px;border-bottom:1px solid var(--line);}
+  .logo{font-family:Georgia,serif;font-size:26px;font-weight:700;margin:0;}
+  .logo span{color:var(--court);}
+  .eyebrow{text-transform:uppercase;letter-spacing:2.5px;font-size:10.5px;font-weight:700;color:var(--muted);margin:14px 0 0;}
+  .hero{font-size:29px;line-height:1.14;margin:16px 0 10px;}
+  .hero span{color:var(--court);}
+  .sub{font-size:15px;color:var(--muted);margin:0;}
+
+  .welcome{padding:22px 40px;background:var(--tint);border-bottom:1px solid var(--line);font-size:15px;}
+  .welcome b{color:var(--court-deep);}
+
+  .sec{padding:28px 40px;border-bottom:1px solid var(--line);}
+  .tag{text-transform:uppercase;letter-spacing:2px;font-size:10.5px;font-weight:700;color:var(--court-deep);margin:0 0 6px;}
+  h2{font-size:22px;line-height:1.2;margin:0 0 11px;}
+  p{margin:0 0 13px;font-size:15px;}
+  p:last-child{margin-bottom:0;}
+  .muted{color:var(--muted);}
+
+  .btn{display:inline-block;background:var(--court);color:#fff;text-decoration:none;font-weight:700;
+    font-size:14px;padding:12px 26px;border-radius:8px;}
+  .btn:hover{background:var(--court-deep);}
+
+  /* IMAGE SLOTS — replace .ph block with <img src="data:image/jpeg;base64,..."> */
+  .shot{border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:16px 0;}
+  .shot .cap{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;font-weight:700;
+    padding:8px 12px;background:var(--court);color:#fff;}
+  .shot img{width:100%;display:block;background:#fff;}
+  .ph{height:150px;display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;
+    font-size:12px;color:var(--muted);
+    background:repeating-linear-gradient(45deg,#faf6f1,#faf6f1 12px,#f3ece3 12px,#f3ece3 24px);}
+  .duo{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0;}
+  .duo .shot{flex:1 1 46%;min-width:210px;margin:0;}
+
+  .feat{border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:0 0 12px;background:var(--tint);}
+  .feat h3{margin:0 0 5px;font-size:16px;}
+  .feat h3 em{font-style:normal;color:var(--court-deep);}
+  .feat p{margin:0;font-size:14px;}
+  .feat ul{margin:8px 0 0;padding-left:18px;font-size:14px;color:var(--muted);}
+  .feat li{margin:2px 0;}
+
+  .stats{display:flex;flex-wrap:wrap;border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:6px 0 14px;}
+  .stat{flex:1 1 25%;min-width:120px;text-align:center;padding:16px 10px;border-right:1px solid var(--line);}
+  .stat:last-child{border-right:none;}
+  .stat b{display:block;font-family:Georgia,serif;font-size:26px;color:var(--court-deep);line-height:1;}
+  .stat small{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);margin-top:7px;line-height:1.3;}
+
+  .demo{border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-top:4px;}
+  .demo .poster{background:var(--ink);text-align:center;padding:26px 20px;}
+  .play{width:44px;height:44px;border-radius:50%;background:var(--court);display:inline-flex;align-items:center;justify-content:center;margin-bottom:10px;}
+  .play i{width:0;height:0;border-left:14px solid #fff;border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:3px;}
+  .demo .poster p{color:#e9ddd0;font-size:13px;margin:0 0 14px;}
+
+  .foot{background:#241a13;color:#cdbfb1;padding:24px 40px;font-size:12.5px;}
+  .foot a{color:var(--court);text-decoration:none;}
+  .foot .fl{font-family:Georgia,serif;font-size:19px;color:#fff;font-weight:700;margin:0 0 4px;}
+  .foot .fl span{color:var(--court);}
+  .foot .fine{margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,.14);font-size:11px;color:#9b8d7f;}
+
+  @media(max-width:520px){.head,.sec,.welcome,.foot{padding-left:22px;padding-right:22px;}.hero{font-size:24px;}.stat{flex-basis:50%;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <p class="logo">Arc<span>Hoops</span></p>
+    <p class="eyebrow">The ArcHoops Newsletter · Issue No. 2</p>
+    <h1 class="hero">Data science starts with <span>why.</span></h1>
+    <p class="sub">Not just what happened on the court—but the reasoning that got you there.</p>
+  </div>
+
+  <div class="welcome">
+    <b>Thank you for being here.</b> This edition is about a shift in how we think about the product—rewarding good thinking, not lucky guesses—and the redesigned experience that makes it possible.
+  </div>
+
+  <div class="sec">
+    <p class="tag">Big News</p>
+    <h2>A rebuilt ArcHoops is coming</h2>
+    <p>We've finished a top-to-bottom redesign of the student experience—lessons, profile, settings, leaderboard, and points, plus a rebuilt admin experience for schools. It's in staging now and launching soon.</p>
+    <p>The new <b>leaderboard</b> is the biggest visible change. Students can sort by XP, accuracy, or streak—so someone who isn't leading on raw points can still see where their consistency stands—and it now defaults to a student's own class rather than the whole school.</p>
+    <div class="duo">
+      <div class="shot">
+        <div class="cap">New Leaderboard</div>
+        <!-- REPLACE: <img src="data:image/jpeg;base64,PASTE_BASE64" alt="New ArcHoops leaderboard"> -->
+        <div class="ph">[ Leaderboard screenshot ]</div>
+      </div>
+      <div class="shot">
+        <div class="cap">Points &amp; XP</div>
+        <!-- REPLACE: <img src="data:image/jpeg;base64,PASTE_BASE64" alt="ArcHoops points and XP page"> -->
+        <div class="ph">[ Points page screenshot ]</div>
+      </div>
+    </div>
+    <p>For schools, redesigned admin tools speed up setup: organization management, bulk email invitations, and domain-level security rules—so a full roster gets onboarded without chasing individual sign-ups.</p>
+  </div>
+
+  <div class="sec">
+    <p class="tag">Product Update</p>
+    <h2>Rewarding reasoning, not luck</h2>
+    <p>Most prediction games have the same flaw: a student who guesses randomly and gets lucky scores the same as one who studied the matchup and reasoned carefully. That teaches the wrong lesson.</p>
+    <p>So we're changing how points work. The new model gives <b>partial credit for well-reasoned predictions</b>—even when the game doesn't go that way. Sound statistical reasoning becomes the thing that pays off, not the coin flip.</p>
+    <div class="feat">
+      <h3><em>Scouting report, front and center</em></h3>
+      <p>We're also moving the data to where the decision happens. The scouting report is coming to the top of the prediction view, defaulting to a histogram of a team's scoring distribution with a dot plot below it—plus historical season data.</p>
+      <ul>
+        <li>See the shape of the data before you pick, not after</li>
+        <li>Spot clusters, spread, and typical vs. unusual outcomes at a glance</li>
+        <li>Practice the same displays students meet in their math standards</li>
+      </ul>
+    </div>
+    <p class="muted">A small interface change with a big instructional payoff: students build the habit of reading a distribution before making a call. In our Park Forest pilot, students who completed at least one lesson predicted with <b>15% higher accuracy</b>.</p>
+    <div class="shot">
+      <div class="cap">Scouting Report — Histogram View</div>
+      <!-- REPLACE: <img src="data:image/jpeg;base64,PASTE_BASE64" alt="Histogram scouting report"> -->
+      <div class="ph">[ Histogram mock-up screenshot ]</div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <p class="tag">Built For Classrooms</p>
+    <h2>Student privacy, by design</h2>
+    <p>If ArcHoops is going to live in classrooms with students under 13, privacy can't be an afterthought. Several of the changes shipping with the redesign exist specifically to protect the students using it.</p>
+    <div class="feat">
+      <h3><em>What's changing</em></h3>
+      <ul>
+        <li><b>Usernames hidden on public leaderboards</b>—students still see their own standing and compete with classmates, without identifying details exposed school-wide</li>
+        <li><b>A dedicated sign-up flow for under-18 users</b>, built around state requirements including New York, California, and Louisiana</li>
+        <li><b>A formal privacy policy</b> covering how student data is handled and secured</li>
+      </ul>
+    </div>
+    <p>For parents, the competitive part kids love doesn't come at the cost of your child's information. For district leaders and consultants evaluating us, COPPA compliance is built into the product, not bolted on later.</p>
+  </div>
+
+  <div class="sec">
+    <p class="tag">From The Classroom</p>
+    <h2>Measuring what actually matters</h2>
+    <p>Engagement is easy to see. Learning is harder to prove—and we'd rather prove it. We're building a formal efficacy study to measure whether ArcHoops moves the needle on statistical reasoning and on how students feel about math. Our Park Forest Elementary pilot gives us the baseline:</p>
+    <div class="stats">
+      <div class="stat"><b>52</b><small>students</small></div>
+      <div class="stat"><b>~1,600</b><small>predictions</small></div>
+      <div class="stat"><b>170+</b><small>games analyzed</small></div>
+      <div class="stat"><b>85%</b><small>completed a lesson</small></div>
+    </div>
+    <p>Alongside it, we're making every in-app lesson interactive and mapping it to the standards teachers are already accountable for—so time spent with us counts twice.</p>
+  </div>
+
+  <div class="sec">
+    <p class="tag">What's Next</p>
+    <h2>On deck</h2>
+    <p>We're designing a <b>badging system</b> so students have milestones to chase beyond the leaderboard, finishing the interactive lessons, and getting the redesign into classrooms ahead of the coming season.</p>
+    <p>New here, or want a refresher? Our <a href="https://www.youtube.com/watch?v=vmGlMD37wQ4">two-minute demo</a> follows one student from first prediction to final buzzer. And thank you for reading Issue No. 2—if a teacher, parent, or school leader in your world would want to follow along, forward this their way.</p>
+    <p class="muted" style="margin-top:10px;">Want ArcHoops in your school, or just have a question? <a href="mailto:info@archoops.net">info@archoops.net</a></p>
+  </div>
+
+  <div class="foot">
+    <p class="fl">Arc<span>Hoops</span></p>
+    <p style="margin:0;">Data science starts with game night.</p>
+    <p style="margin:8px 0 0;"><a href="https://www.archoops.net">archoops.net</a> · <a href="mailto:info@archoops.net">info@archoops.net</a></p>
+    <div class="fine">You're receiving this because you signed up for the ArcHoops newsletter. © 2026 ArcHoops. · <a href="https://multisend-unsubscribe.gmail.com/$placeholder">Unsubscribe</a></div>
+  </div>
+
+</div>
+</body>
+</html>
