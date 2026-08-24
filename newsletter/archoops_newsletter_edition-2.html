@@ -87,60 +87,66 @@
   <div class="head">
     <p class="logo">Arc<span>Hoops</span></p>
     <p class="eyebrow">The ArcHoops Newsletter · Issue No. 2</p>
-    <h1 class="hero">Data science starts with <span>why.</span></h1>
-    <p class="sub">Not just what happened on the court—but the reasoning that got you there.</p>
+    <h1 class="hero">Data science starts with <span>the numbers.</span></h1>
+    <p class="sub">Read the distribution first. Then make the call.</p>
   </div>
 
   <div class="welcome">
-    <b>Thank you for being here.</b> This edition is about a shift in how we think about the product—rewarding good thinking, not lucky guesses—and the redesigned experience that makes it possible.
+    <b>Thank you for being here.</b> This edition covers what we've built for schools, a change to where students meet the data, and an open question we're working through about how good thinking should be rewarded.
   </div>
 
   <div class="sec">
     <p class="tag">Big News</p>
-    <h2>A rebuilt ArcHoops is coming</h2>
-    <p>We've finished a top-to-bottom redesign of the student experience—lessons, profile, settings, leaderboard, and points, plus a rebuilt admin experience for schools. It's in staging now and launching soon.</p>
-    <p>The new <b>leaderboard</b> is the biggest visible change. Students can sort by XP, accuracy, or streak—so someone who isn't leading on raw points can still see where their consistency stands—and it now defaults to a student's own class rather than the whole school.</p>
+    <h2>Built for the whole school, not just the student</h2>
+    <p>Last issue showed you the new student dashboard. This one is about everything behind it: we've rebuilt the school-side experience so ArcHoops can run across a building or district without a teacher hand-assembling it.</p>
+    <p>The redesigned <b>admin experience</b> handles the parts that used to slow schools down—organization management, bulk email invitations, and domain-level security rules that keep enrollment restricted to a school's own accounts. A teacher or district administrator can bring in a full roster in one pass instead of chasing individual sign-ups.</p>
     <div class="duo">
       <div class="shot">
-        <div class="cap">New Leaderboard</div>
-        <!-- REPLACE: <img src="data:image/jpeg;base64,PASTE_BASE64" alt="New ArcHoops leaderboard"> -->
-        <div class="ph">[ Leaderboard screenshot ]</div>
+        <div class="cap">Admin Dashboard</div>
+        <!-- REPLACE: <img src="data:image/jpeg;base64,PASTE_BASE64" alt="ArcHoops admin dashboard"> -->
+        <div class="ph">[ Admin page screenshot ]</div>
       </div>
       <div class="shot">
-        <div class="cap">Points &amp; XP</div>
-        <!-- REPLACE: <img src="data:image/jpeg;base64,PASTE_BASE64" alt="ArcHoops points and XP page"> -->
-        <div class="ph">[ Points page screenshot ]</div>
+        <div class="cap">Classroom View</div>
+        <!-- REPLACE: <img src="data:image/jpeg;base64,PASTE_BASE64" alt="ArcHoops classroom view"> -->
+        <div class="ph">[ Classroom view screenshot ]</div>
       </div>
     </div>
-    <p>For schools, redesigned admin tools speed up setup: organization management, bulk email invitations, and domain-level security rules—so a full roster gets onboarded without chasing individual sign-ups.</p>
+    <p>Teachers also get separate <b>teacher and assistant-administrator roles</b> and can toggle between a single classroom and a school-wide view. It's all in staging now and launching soon.</p>
   </div>
 
   <div class="sec">
     <p class="tag">Product Update</p>
-    <h2>Rewarding reasoning, not luck</h2>
-    <p>Most prediction games have the same flaw: a student who guesses randomly and gets lucky scores the same as one who studied the matchup and reasoned carefully. That teaches the wrong lesson.</p>
-    <p>So we're changing how points work. The new model gives <b>partial credit for well-reasoned predictions</b>—even when the game doesn't go that way. Sound statistical reasoning becomes the thing that pays off, not the coin flip.</p>
+    <h2>Putting the data where the decision happens</h2>
+    <p>The scouting report is moving to the top of the prediction view. Instead of picking first and seeing the numbers after, students will open a matchup to a histogram of a team's scoring distribution, a dot plot beneath it, and historical season data.</p>
+    <div class="shot">
+      <div class="cap">Scouting Report — Histogram View</div>
+      <!-- REPLACE: <img src="data:image/jpeg;base64,PASTE_BASE64" alt="Histogram scouting report"> -->
+      <div class="ph">[ Histogram mock-up screenshot ]</div>
+    </div>
     <div class="feat">
-      <h3><em>Scouting report, front and center</em></h3>
-      <p>We're also moving the data to where the decision happens. The scouting report is coming to the top of the prediction view, defaulting to a histogram of a team's scoring distribution with a dot plot below it—plus historical season data.</p>
+      <h3><em>Why it matters</em></h3>
       <ul>
         <li>See the shape of the data before you pick, not after</li>
         <li>Spot clusters, spread, and typical vs. unusual outcomes at a glance</li>
         <li>Practice the same displays students meet in their math standards</li>
       </ul>
     </div>
-    <p class="muted">A small interface change with a big instructional payoff: students build the habit of reading a distribution before making a call. In our Park Forest pilot, students who completed at least one lesson predicted with <b>15% higher accuracy</b>.</p>
-    <div class="shot">
-      <div class="cap">Scouting Report — Histogram View</div>
-      <!-- REPLACE: <img src="data:image/jpeg;base64,PASTE_BASE64" alt="Histogram scouting report"> -->
-      <div class="ph">[ Histogram mock-up screenshot ]</div>
-    </div>
+    <p class="muted">A small change with a big instructional payoff—and in our Park Forest pilot, students who completed at least one lesson predicted with <b>15% higher accuracy</b>.</p>
+  </div>
+
+  <div class="sec">
+    <p class="tag">What We're Exploring</p>
+    <h2>Can you reward reasoning instead of luck?</h2>
+    <p>Here's a question we keep circling back to. Most prediction games have the same flaw: a student who guesses randomly and gets lucky scores exactly the same as one who studied the matchup and reasoned carefully. That quietly teaches the wrong lesson.</p>
+    <p>So we're researching an alternative—a scoring model that could award <b>partial credit for well-reasoned predictions</b>, even when the game doesn't go that way. This is an open research question for us, not a feature with a ship date. Getting it right means answering some hard ones: how do you evaluate reasoning fairly, without making the game feel arbitrary to a twelve-year-old?</p>
+    <p class="muted">We'd rather explore it carefully than ship it fast. If you're an educator or researcher with a point of view on this, we'd genuinely like to hear it—<a href="mailto:info@archoops.net">info@archoops.net</a>.</p>
   </div>
 
   <div class="sec">
     <p class="tag">Built For Classrooms</p>
     <h2>Student privacy, by design</h2>
-    <p>If ArcHoops is going to live in classrooms with students under 13, privacy can't be an afterthought. Several of the changes shipping with the redesign exist specifically to protect the students using it.</p>
+    <p>If ArcHoops is going to live in classrooms with students under 13, privacy can't be an afterthought. Several changes shipping with the redesign exist specifically to protect the students using it.</p>
     <div class="feat">
       <h3><em>What's changing</em></h3>
       <ul>
@@ -149,27 +155,27 @@
         <li><b>A formal privacy policy</b> covering how student data is handled and secured</li>
       </ul>
     </div>
-    <p>For parents, the competitive part kids love doesn't come at the cost of your child's information. For district leaders and consultants evaluating us, COPPA compliance is built into the product, not bolted on later.</p>
+    <p>For parents, the competitive part kids love doesn't cost your child's privacy. For district leaders evaluating us, COPPA compliance is built in, not bolted on later.</p>
   </div>
 
   <div class="sec">
     <p class="tag">From The Classroom</p>
     <h2>Measuring what actually matters</h2>
-    <p>Engagement is easy to see. Learning is harder to prove—and we'd rather prove it. We're building a formal efficacy study to measure whether ArcHoops moves the needle on statistical reasoning and on how students feel about math. Our Park Forest Elementary pilot gives us the baseline:</p>
+    <p>Engagement is easy to see. Learning is harder to prove—and we'd rather prove it. We're building a formal efficacy study to measure whether ArcHoops moves the needle on statistical reasoning and on how students feel about math. Park Forest gives us the baseline:</p>
     <div class="stats">
       <div class="stat"><b>52</b><small>students</small></div>
       <div class="stat"><b>~1,600</b><small>predictions</small></div>
       <div class="stat"><b>170+</b><small>games analyzed</small></div>
       <div class="stat"><b>85%</b><small>completed a lesson</small></div>
     </div>
-    <p>Alongside it, we're making every in-app lesson interactive and mapping it to the standards teachers are already accountable for—so time spent with us counts twice.</p>
+    <p>Alongside it, every in-app lesson is becoming interactive and mapped to the standards teachers are already accountable for.</p>
   </div>
 
   <div class="sec">
     <p class="tag">What's Next</p>
     <h2>On deck</h2>
     <p>We're designing a <b>badging system</b> so students have milestones to chase beyond the leaderboard, finishing the interactive lessons, and getting the redesign into classrooms ahead of the coming season.</p>
-    <p>New here, or want a refresher? Our <a href="https://www.youtube.com/watch?v=vmGlMD37wQ4">two-minute demo</a> follows one student from first prediction to final buzzer. And thank you for reading Issue No. 2—if a teacher, parent, or school leader in your world would want to follow along, forward this their way.</p>
+    <p>New here? Our <a href="https://www.youtube.com/watch?v=vmGlMD37wQ4">two-minute demo</a> follows one student from first prediction to final buzzer. Thank you for reading Issue No. 2—if a teacher, parent, or school leader would want to follow along, forward this their way.</p>
     <p class="muted" style="margin-top:10px;">Want ArcHoops in your school, or just have a question? <a href="mailto:info@archoops.net">info@archoops.net</a></p>
   </div>
 
