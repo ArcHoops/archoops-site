@@ -77,6 +77,9 @@
   .foot .fl{font-family:Georgia,serif;font-size:19px;color:#fff;font-weight:700;margin:0 0 4px;}
   .foot .fl span{color:var(--court);}
   .foot .fine{margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,.14);font-size:11px;color:#9b8d7f;}
+  /* Subscriber footer: hidden on the website, shown for email copy via #email */
+  .foot .fine{display:none;}
+  .foot .fine:target{display:block;}
 
   @media(max-width:520px){.head,.sec,.welcome,.foot{padding-left:22px;padding-right:22px;}.hero{font-size:24px;}.stat{flex-basis:50%;}}
 </style>
@@ -157,7 +160,7 @@
     <p class="fl">Arc<span>Hoops</span></p>
     <p style="margin:0;">Data science starts with game night.</p>
     <p style="margin:8px 0 0;"><a href="https://www.archoops.net">archoops.net</a> · <a href="mailto:info@archoops.net">info@archoops.net</a></p>
-    <div class="fine">You're receiving this because you signed up for the ArcHoops newsletter. © 2026 ArcHoops. · <a href="https://multisend-unsubscribe.gmail.com/$placeholder">Unsubscribe</a></div>
+    <div class="fine" id="email">You're receiving this because you signed up for the ArcHoops newsletter. © 2026 ArcHoops. · <a href="https://multisend-unsubscribe.gmail.com/$placeholder">Unsubscribe</a></div>
   </div>
 
 </div>
