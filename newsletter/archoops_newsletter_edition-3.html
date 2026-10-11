@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ArcHoops — Issue No. 3</title>
+<style>
+  :root{
+    --ink:#1c1917;
+    --court:#e8792b;
+    --court-deep:#c85f16;
+    --muted:#6b6560;
+    --line:#ece7e1;
+    --tint:#fdf4ec;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:#f2ede7;color:var(--ink);
+    font-family:-apple-system,'Helvetica Neue',Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:600px;margin:0 auto;background:#ffffff;}
+  a{color:var(--court-deep);}
+  h1,h2,h3{font-family:Georgia,'Times New Roman',serif;letter-spacing:-.4px;}
+
+  .head{padding:34px 40px 26px;border-bottom:1px solid var(--line);}
+  .logo{font-family:Georgia,serif;font-size:26px;font-weight:700;margin:0;}
+  .logo span{color:var(--court);}
+  .eyebrow{text-transform:uppercase;letter-spacing:2.5px;font-size:10.5px;font-weight:700;color:var(--muted);margin:14px 0 0;}
+  .hero{font-size:29px;line-height:1.14;margin:16px 0 10px;}
+  .hero span{color:var(--court);}
+  .sub{font-size:15px;color:var(--muted);margin:0;}
+
+  .welcome{padding:22px 40px;background:var(--tint);border-bottom:1px solid var(--line);font-size:15px;}
+  .welcome b{color:var(--court-deep);}
+
+  .sec{padding:28px 40px;border-bottom:1px solid var(--line);}
+  .tag{text-transform:uppercase;letter-spacing:2px;font-size:10.5px;font-weight:700;color:var(--court-deep);margin:0 0 6px;}
+  h2{font-size:22px;line-height:1.2;margin:0 0 11px;}
+  p{margin:0 0 13px;font-size:15px;}
+  p:last-child{margin-bottom:0;}
+  .muted{color:var(--muted);}
+
+  .btn{display:inline-block;background:var(--court);color:#fff;text-decoration:none;font-weight:700;
+    font-size:14px;padding:12px 26px;border-radius:8px;}
+  .btn:hover{background:var(--court-deep);}
+
+  /* IMAGE SLOTS — replace .ph block with <img src="data:image/jpeg;base64,..."> */
+  .shot{border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:16px 0;}
+  .shot .cap{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;font-weight:700;
+    padding:8px 12px;background:var(--court);color:#fff;}
+  .shot img{width:100%;display:block;background:#fff;}
+  .ph{height:150px;display:flex;align-items:center;justify-content:center;text-align:center;padding:16px;
+    font-size:12px;color:var(--muted);
+    background:repeating-linear-gradient(45deg,#faf6f1,#faf6f1 12px,#f3ece3 12px,#f3ece3 24px);}
+  .duo{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0;}
+  .duo .shot{flex:1 1 46%;min-width:210px;margin:0;}
+
+  .feat{border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:0 0 12px;background:var(--tint);}
+  .feat h3{margin:0 0 5px;font-size:16px;}
+  .feat h3 em{font-style:normal;color:var(--court-deep);}
+  .feat p{margin:0;font-size:14px;}
+  .feat ul{margin:8px 0 0;padding-left:18px;font-size:14px;color:var(--muted);}
+  .feat li{margin:2px 0;}
+
+  .stats{display:flex;flex-wrap:wrap;border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:6px 0 14px;}
+  .stat{flex:1 1 25%;min-width:120px;text-align:center;padding:16px 10px;border-right:1px solid var(--line);}
+  .stat:last-child{border-right:none;}
+  .stat b{display:block;font-family:Georgia,serif;font-size:26px;color:var(--court-deep);line-height:1;}
+  .stat small{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);margin-top:7px;line-height:1.3;}
+
+  .demo{border:1px solid var(--line);border-radius:10px;overflow:hidden;margin-top:4px;}
+  .demo .poster{background:var(--ink);text-align:center;padding:26px 20px;}
+  .play{width:44px;height:44px;border-radius:50%;background:var(--court);display:inline-flex;align-items:center;justify-content:center;margin-bottom:10px;}
+  .play i{width:0;height:0;border-left:14px solid #fff;border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:3px;}
+  .demo .poster p{color:#e9ddd0;font-size:13px;margin:0 0 14px;}
+
+  .foot{background:#241a13;color:#cdbfb1;padding:24px 40px;font-size:12.5px;}
+  .foot a{color:var(--court);text-decoration:none;}
+  .foot .fl{font-family:Georgia,serif;font-size:19px;color:#fff;font-weight:700;margin:0 0 4px;}
+  .foot .fl span{color:var(--court);}
+  .foot .fine{margin-top:12px;padding-top:12px;border-top:1px solid rgba(255,255,255,.14);font-size:11px;color:#9b8d7f;}
+
+  @media(max-width:520px){.head,.sec,.welcome,.foot{padding-left:22px;padding-right:22px;}.hero{font-size:24px;}.stat{flex-basis:50%;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="head">
+    <p class="logo">Arc<span>Hoops</span></p>
+    <p class="eyebrow">The ArcHoops Newsletter · Issue No. 3</p>
+    <h1 class="hero">Tip-off is <span>here.</span></h1>
+    <p class="sub">The season starts Oct 20. So does your first prediction.</p>
+  </div>
+
+  <div class="welcome">
+    <b>Thank you for being here.</b> This edition is about the public launch, a shout-out to the first classroom to call ArcHoops home, and what's next for both the kids playing at the kitchen table and the ones playing as a class.
+  </div>
+
+  <div class="sec">
+    <p class="tag">Big News</p>
+    <h2>ArcHoops is live for the new season</h2>
+    <p>Opening night is <b>October 20</b>, and ArcHoops is live right alongside it. Whether you're joining as a family, a classroom, or a whole school, sign-up is open now—no waiting on anyone else to get started.</p>
+    <div class="shot">
+      <div class="cap">Homepage — Season Launch</div>
+      <div class="ph">[ Homepage screenshot ]</div>
+    </div>
+    <p>Every student—on a class roster or signed up on their own—now lands on a real leaderboard from their very first prediction, not just once they join a class. Make a call on opening night, and you're already on the board.</p>
+    <p style="text-align:center;margin-top:18px;"><a class="btn" href="https://www.archoops.net">Sign up for the season</a></p>
+  </div>
+
+  <div class="sec">
+    <p class="tag">In the News</p>
+    <h2>Our co-founder made the RealLIST</h2>
+    <p>Our co-founder <b>Ronald Dupree</b> was named to Technical.ly's <b>RealLIST Innovators 2026</b>, its first-ever Louisiana list honoring the region's most influential inventors, developers, scientists, and engineers. A nice bit of outside validation as we head into launch—<a href="https://technical.ly/workforce/reallist-innovators-2026-louisiana/">read the full list here</a>.</p>
+  </div>
+
+  <div class="sec">
+    <p class="tag">School Spotlight</p>
+    <h2>Meet our Founding Classroom</h2>
+    <p>Every new thing needs a first believer. For ArcHoops, that's <b>Park Forest</b>, the class that spent last season testing predictions, lessons, and more than a few bugs so this launch could be ready for everyone else. We're proud to call them our <b>Founding Classroom</b>.</p>
+    <div class="feat">
+      <h3><em>Opening Night Classroom Challenge</em></h3>
+      <p>On October 20, classes everywhere can predict the score, the winner, and a team stat for opening night—then review the results together the next morning. It's a fun way for a class to kick off the season as a team, not just as individual players.</p>
+    </div>
+    <p>Any class or school that joins before Thanksgiving earns the same Founding Classroom badge Park Forest has. If that's you—or you're a teacher who wants it to be—<a href="mailto:info@archoops.net">info@archoops.net</a> and we'll get you set up.</p>
+  </div>
+
+  <div class="sec">
+    <p class="tag">Product Update</p>
+    <h2>Smoother for everyone, start to finish</h2>
+    <p>A lot changed behind the scenes to get ready for a full season of real games. A few of the upgrades you'll notice:</p>
+    <div class="feat">
+      <h3><em>What's new</em></h3>
+      <ul>
+        <li>A global leaderboard for anyone, class or no class—direct sign-ups now have somewhere to compete from day one</li>
+        <li>Interactive lessons that actually track your progress, so finishing one unlocks the next without a second thought</li>
+        <li>A toggle to follow NBA and WNBA games side by side once both seasons are underway</li>
+        <li>A feedback button right in the app—tell us what's working (or isn't) without leaving the page</li>
+      </ul>
+    </div>
+    <p class="muted">We'll keep calling this a young, fast-moving release—expect a few rough edges this season as we keep tuning it with real games and real students.</p>
+  </div>
+
+  <div class="sec">
+    <p class="tag">Built For Every Student</p>
+    <h2>One sign-up experience, for every age</h2>
+    <p>We simplified how we protect students using ArcHoops. Instead of different rules for different ages, every student under 18 now gets the same experience: they can start predicting and using lessons right away, while a parent or guardian is asked by email to approve the account. If we don't hear back in time, the account and its data are automatically deleted—no action needed on your end.</p>
+    <p>Usernames stay hidden on every leaderboard, so classmates can compete without anyone's identity on display. Nothing here requires a school or district to set up—it works the same whether a student joins through a classroom or signs up with a parent at home.</p>
+  </div>
+
+  <div class="sec">
+    <p class="tag">What's Next</p>
+    <h2>On deck</h2>
+    <p>Last issue, we asked whether a prediction game could reward good thinking, not just a lucky outcome. We're starting to answer that: watch for <b>Student Analyst of the Month</b>, a monthly shout-out for the class's best-reasoned prediction—not just the correct one.</p>
+    <p>We're also building a <b>Founding Educator</b> program for a handful of teachers who want early access to new features and a direct line to give feedback, plus <b>Family Data Night</b> kits for schools that want to bring parents and kids together to predict as a group.</p>
+    <p class="muted" style="margin-top:10px;">Want ArcHoops in your school, want to sign up your own family, or just have a question? <a href="mailto:info@archoops.net">info@archoops.net</a></p>
+  </div>
+
+  <div class="foot">
+    <p class="fl">Arc<span>Hoops</span></p>
+    <p style="margin:0;">Data science starts with game night.</p>
+    <p style="margin:8px 0 0;"><a href="https://www.archoops.net">archoops.net</a> · <a href="mailto:info@archoops.net">info@archoops.net</a></p>
+    <div class="fine">You're receiving this because you signed up for the ArcHoops newsletter. © 2026 ArcHoops. · <a href="https://multisend-unsubscribe.gmail.com/$placeholder">Unsubscribe</a></div>
+  </div>
+
+</div>
+</body>
+</html>
