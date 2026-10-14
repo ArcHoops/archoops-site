@@ -80,12 +80,24 @@
   /* Subscriber footer: hidden on the website, shown for email copy via #email */
   .foot .fine{display:none;}
   .foot .fine:target{display:block;}
+  /* Archive link: shown on the website, hidden in the #email view */
+  .back{padding:14px 40px 0;margin:0;font-size:12.5px;}
+  .back a{text-decoration:none;font-weight:600;}
+  body:has(#email:target) .back{display:none;}
 
-  @media(max-width:520px){.head,.sec,.welcome,.foot{padding-left:22px;padding-right:22px;}.hero{font-size:24px;}.stat{flex-basis:50%;}}
+  .cta{padding:28px 40px;border-bottom:1px solid var(--line);background:var(--tint);text-align:center;}
+  .cta h2{margin-bottom:14px;}
+  .cta .who{text-align:left;max-width:440px;margin:0 auto 18px;}
+  .cta .who p{font-size:14px;margin:0 0 8px;}
+  .cta .who b{color:var(--court-deep);}
+
+  @media(max-width:520px){.head,.sec,.welcome,.foot,.cta,.back{padding-left:22px;padding-right:22px;}.hero{font-size:24px;}.stat{flex-basis:50%;}}
 </style>
 </head>
 <body>
 <div class="wrap">
+
+  <p class="back"><a href="index.html">← Back to the ArcHoops Newsletter archive</a></p>
 
   <div class="head">
     <p class="logo">Arc<span>Hoops</span></p>
@@ -95,19 +107,28 @@
   </div>
 
   <div class="welcome">
-    <b>Thank you for being here.</b> This edition is about the public launch, a shout-out to the first school to call ArcHoops home, and how it works for both the kids playing at the kitchen table and the ones playing as a class.
+    <b>Thank you for being here.</b> This edition is about our beta launch, a shout-out to the first school to call ArcHoops home, and how it works for both the kids playing at the kitchen table and the ones playing as a class.
   </div>
 
   <div class="sec">
     <p class="tag">Big News</p>
-    <h2>ArcHoops is live for the new season</h2>
-    <p>Opening night is <b>October 20</b>, and ArcHoops is live right alongside it. Whether you're joining as a family, a classroom, or a whole school, sign-up is open now—no waiting on anyone else to get started.</p>
+    <h2>The ArcHoops beta is live for the new season</h2>
+    <p>Opening night is <b>October 20</b>, and ArcHoops is live right alongside it. Whether you're joining as a family, a classroom, or a whole school, sign-up is open now—no waiting on anyone else to get started. Every prediction and every piece of feedback from students and schools helps shape what ArcHoops becomes.</p>
     <div class="shot">
       <div class="cap">Homepage — Season Launch</div>
       <div class="ph">[ Homepage screenshot ]</div>
     </div>
     <p>Every student—on a class roster or signed up on their own—now lands on a real leaderboard from their very first prediction, not just once they join a class. Make a call on opening night, and you're already on the board.</p>
-    <p style="text-align:center;margin-top:18px;"><a class="btn" href="https://www.archoops.net">Sign up for the season</a></p>
+  </div>
+
+  <div class="cta">
+    <h2>Make your first prediction on opening night</h2>
+    <div class="who">
+      <p><b>Parents:</b> Get your kid signed up today. They can start predicting right away, and you'll get an email to approve.</p>
+      <p><b>Teachers &amp; schools:</b> Create your classroom account and enroll your students.</p>
+      <p><b>Everyone else:</b> Come see what it's all about.</p>
+    </div>
+    <a class="btn" href="https://app.archoops.net/signup">Sign up today</a>
   </div>
 
   <div class="sec">
@@ -125,6 +146,7 @@
       <p>On October 20, classes everywhere can predict the score, the winner, and a team stat for opening night—then review the results together the next morning. It's a fun way for a class to kick off the season as a team, not just as individual players.</p>
     </div>
     <p>Any school that joins before Thanksgiving earns Founding School status, just like Park Forest. If that's you—or you're a teacher who wants your school to be—<a href="mailto:info@archoops.net">info@archoops.net</a> and we'll get you set up.</p>
+    <p>We're still shaping what Founding School status includes. Ideas on the table include direct access to our team through the season, early looks at new features, and a reward for the top class in the Opening Night Challenge. We'll share the details in an upcoming issue.</p>
   </div>
 
   <div class="sec">
@@ -140,7 +162,7 @@
         <li>A feedback button right in the app—tell us what's working (or isn't) without leaving the page</li>
       </ul>
     </div>
-    <p class="muted">We'll keep calling this a young, fast-moving release—expect a few rough edges this season as we keep tuning it with real games and real students.</p>
+    <p class="muted">This is a beta, so expect a few rough edges. The in-app feedback button is the fastest way to tell us what to fix next.</p>
   </div>
 
   <div class="sec">
@@ -153,7 +175,7 @@
   <div class="sec">
     <p class="tag">What's Next</p>
     <h2>Get involved</h2>
-    <p class="muted" style="margin-top:10px;">Want ArcHoops in your school, want to sign up your own family, or just have a question? <a href="mailto:info@archoops.net">info@archoops.net</a></p>
+    <p class="muted" style="margin-top:10px;">Questions, or want help getting your school set up? <a href="mailto:info@archoops.net">info@archoops.net</a></p>
   </div>
 
   <div class="foot">
